@@ -182,8 +182,10 @@ This script runs sensitivity analysis (node KO) with all single stimuli and all 
 
 
 ./Sensitivity_M1M2_4h/runSens.m
+
 This script plots sensitivity analysis (node KO) results with simulated M1 and M2 stimulations.
-	
+The output includes Fig 3(ABC), 5A, and supp Fig 3.
+
 	Input: ./Input/
 			macmodelSensLPS+IFNg.txt
 			macmodelSensIL4.txt
