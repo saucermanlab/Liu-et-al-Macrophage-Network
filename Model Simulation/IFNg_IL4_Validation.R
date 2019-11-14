@@ -7,7 +7,7 @@ require(gdata)
 require(reshape2)
 require(gplots)
 
-# setwd("/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation/simulation results")
+setwd("Model Simulation")
 
 val.names <- list.files('simulation results',pattern='*_validation.txt$')
 val.actnames <- list.files('simulation results',pattern='*_act.txt$')

@@ -8,12 +8,13 @@ clc;
 close all;
 
 % Set file directory path
-cd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Pairwise Simulation')
+cd('Pairwise Simulation')
+addpath('../Input')
 
 % Choose validation reference file; 0: mac validation spreadsheet model
 % v5.1.xlsx; 1:
-val_names={'M0 vs M1 validation exp automated_mRNA only.xlsx'...
-    'M0 vs M2 validation exp automated_mRNA only.xlsx'};
+val_names={'LPS+IFNg validation RNASeq.xlsx'...
+    'IL4 validation RNASeq.xlsx'};
 
 % Read the stimuli combinations to be tested
 [~, txt, raw] = xlsread('Stimuli chart.xlsx');
@@ -90,3 +91,5 @@ tableP = array2table(percentMatch');
 tableP.Properties.VariableNames = {'Match_to_M1' 'Match_to_M2'};
 tableP.Properties.RowNames = comboname;
     writetable(tableP,['simulation results/' 'Screening_percentMatch.txt'],'Delimiter','\t','WriteRowNames',true);
+
+cd('..')

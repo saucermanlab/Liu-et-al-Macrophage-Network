@@ -15,8 +15,8 @@ scr = 0; % 0: M1-M2 sens analysis 1: screening sens analysis
 
 if run==1
 %% Run sensitivity analysis
-cd('/Users/Astor 1/Desktop/Netflux-master/Netflux/models/Macrophage/manuscriptdata')
-addpath('/Users/Astor/Desktop/Netflux-master/Netflux/models')
+cd('Sensitivity_M1M2_4h')
+addpath('../Input')
 
 
 % Input: LPS and IFNg
@@ -40,8 +40,8 @@ writetable(table2,['macmodelSensIL4.txt'],'Delimiter','\t','WriteRowNames',true)
 else
     %% Plot only
 if scr == 0
-    cd('/Users/Astor 1/Desktop/Netflux-master/Netflux/models/Macrophage/manuscriptdata')
-    addpath('/Users/Astor/Desktop/Netflux-master/Netflux/models')
+    cd('Sensitivity_M1M2_4h')
+    addpath('../Input')
 
 [params,y0] = modelParams; % this accesses the parameters from model Params (part of the ODE code)
 
@@ -229,8 +229,8 @@ end
 
 %%
 else % Screening sens analysis
-    cd('/Users/Astor 1/Desktop/Netflux-master/Netflux/models/Macrophage/macmodel_test_original6.3p_fixed_updated')
-addpath('/Users/Astor 1/Desktop/Netflux-master/Netflux/models')
+    cd('Sensitivity_M1M2_4h')
+addpath('../Input')
 
 %parameters and initial conditions
 [params,y0] = modelParams; % this accesses the parameters from model Params (part of the ODE code)
@@ -241,7 +241,7 @@ addpath('/Users/Astor 1/Desktop/Netflux-master/Netflux/models')
 
 speciesNames = strrep(speciesNames,'_','\_'); % Add a backslash before the underscores in the texts for correct display
 
-    cd('/Users/Astor 1/Desktop/Netflux-master/Netflux/models/Macrophage/macmodel_test_original6.3p_fixed_updated/screening_sens')
+    cd('../Sensitivity Screening/simulation results')
     files = dir('macmodel*.txt'); % List all .txt files
     fname=struct2cell(files); % Extract file names
     tend=24;

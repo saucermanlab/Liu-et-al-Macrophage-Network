@@ -6,13 +6,12 @@
 clear all;
 close all;
 
-% Set file directory path
-% Do I need to cd at all?
-% cd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation/')
-% val_names={'mac validation sum M1.xlsx' 'mac validation sum M2.xlsx'...
-%    'LPS+IFNg validation RNASeq.xlsx' 'IL4 validation RNASeq.xlsx'...
-%    'mac validation sum M1 PM.xlsx' 'mac validation sum M2 PM.xlsx'};
-val_names={'LPS+IFNg validation RNASeq.xlsx' 'IL4 validation RNASeq.xlsx};
+% Set your file directory path
+
+cd('Model Simulation/')
+addpath('../Input')
+
+val_names={'LPS+IFNg validation RNASeq.xlsx' 'IL4 validation RNASeq.xlsx'};
 
 
 inputlevel=0.7;
@@ -154,3 +153,4 @@ for val=1:4 % 1:22
     percentMatch = percentMatch/100
 end
 
+cd('..')

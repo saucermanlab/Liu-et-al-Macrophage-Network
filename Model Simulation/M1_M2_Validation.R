@@ -2,7 +2,7 @@
 # Jingyuan Zhang reduced version to only generate Model vs Lindsey RNAseq heatmap (rms normalized) for Figure 2C
 # 5/8/2018
 
-# setwd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation')
+setwd('Model Simulation')
 require(tidyverse)
 require(gdata)
 require(gplots)

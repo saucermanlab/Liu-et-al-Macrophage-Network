@@ -4,9 +4,10 @@
 clear all;
 close all;
 
-% Set file directory path
+% Set your file directory path here
 
-% cd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation/')
+cd('Model Simulation/')
+addpath('../Input')
 
 val_names={'IFNg validation GSE84520.xlsx' 'IFNg+IL4 validation GSE84520.xlsx' 'IL4 validation Illum-GSE84520.xlsx'};
 
@@ -38,3 +39,5 @@ for val= 1:length(val_names)
  end
 
 percentMatch = percentMatch/100
+
+cd('..')

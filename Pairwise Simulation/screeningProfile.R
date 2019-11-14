@@ -5,9 +5,7 @@
 require(tidyverse)
 require(scales)
 
-#  setwd(
-#   "/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Pairwise Simulation"
-# )
+setwd("/Pairwise Simulation")
 
 m1m <- read_csv("M0vsM1_matched.csv")
 m1 <- m1m[!is.na(m1m$log2FC_2over1), c(2, 15)]

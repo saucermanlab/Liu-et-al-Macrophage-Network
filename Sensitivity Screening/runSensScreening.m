@@ -8,6 +8,9 @@ clc;
 clear all;
 close all;
 
+cd('Sensitivity Screening/')
+addpath('../Input')
+
 % read the validation sheet
     [~, txt, raw] = xlsread('Stimuli chart.xlsx');
     input1 = txt(2:end, 2); %second column, if 2 inputs used will need to alter this code
@@ -43,3 +46,5 @@ table.Properties.RowNames = speciesM1;
 writetable(table,['./simulation results/macmodelSens_' dataset '_0.7.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
 end
 toc
+
+cd('..')
