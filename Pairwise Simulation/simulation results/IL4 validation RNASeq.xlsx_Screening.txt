@@ -1,0 +1,631 @@
+input1	input2	input3	output	measurement	prediction	predictedChange	match
+LPS	IFNg		Arg1_mrna	Increase	Increase	0.23162	yes
+LPS	IFNg		CCL17_mrna	Increase	Increase	0.23162	yes
+LPS	IFNg		Fizz1_mrna	Increase	Increase	0.23162	yes
+LPS	IFNg		IL1_mrna	Increase	Increase	8.994752463012758e+20	yes
+LPS	IFNg		IL18_mrna	Decrease	Increase	264.6478	no
+LPS	IFNg		IRF1_mrna	Increase	Increase	892.4708	yes
+LPS	IFNg		KLF4_mrna	Increase	Increase	0.31968	yes
+LPS	IFNg		Myc_mrna	Increase	Increase	0.23162	yes
+LPS	IFNg		PPARg_mrna	Increase	Increase	0.23116	yes
+LPS	IFNg		SMAD7_mrna	Increase	Increase	892.4708	yes
+LPS	IFNg		VEGF_mrna	Decrease	Increase	754.1874	no
+LPS	IFNg		Ym1_mrna	Increase	Increase	0.23162	yes
+LPS	IFNg		SOCS1_mrna	Increase	Increase	633.5926	yes
+LPS	IFNg		SOCS3_mrna	Increase	Increase	2400.1	yes
+LPS	IFNb		Arg1_mrna	Increase	Increase	0.17504	yes
+LPS	IFNb		CCL17_mrna	Increase	Increase	0.17504	yes
+LPS	IFNb		Fizz1_mrna	Increase	Increase	0.17504	yes
+LPS	IFNb		IL1_mrna	Increase	Increase	1.011373052316524e+21	yes
+LPS	IFNb		IL18_mrna	Decrease	Increase	254.6874	no
+LPS	IFNb		IRF1_mrna	Increase	Increase	865.2263	yes
+LPS	IFNb		KLF4_mrna	Increase	Increase	0.24344	yes
+LPS	IFNb		Myc_mrna	Increase	Increase	0.17504	yes
+LPS	IFNb		PPARg_mrna	Increase	Increase	0.17462	yes
+LPS	IFNb		SMAD7_mrna	Increase	Increase	865.2263	yes
+LPS	IFNb		VEGF_mrna	Decrease	Increase	402.77	no
+LPS	IFNb		Ym1_mrna	Increase	Increase	0.17504	yes
+LPS	IFNb		SOCS1_mrna	Increase	Increase	625.7016	yes
+LPS	IFNb		SOCS3_mrna	Increase	Increase	2369.3226	yes
+LPS	TNFa		Arg1_mrna	Increase	Increase	0.1829	yes
+LPS	TNFa		CCL17_mrna	Increase	Increase	0.1829	yes
+LPS	TNFa		Fizz1_mrna	Increase	Increase	0.1829	yes
+LPS	TNFa		IL1_mrna	Increase	Increase	1.983400382808497e+21	yes
+LPS	TNFa		IL18_mrna	Decrease	Increase	249.9709	no
+LPS	TNFa		IRF1_mrna	Increase	Increase	829.9128	yes
+LPS	TNFa		KLF4_mrna	Increase	Increase	0.25679	yes
+LPS	TNFa		Myc_mrna	Increase	Increase	0.1829	yes
+LPS	TNFa		PPARg_mrna	Increase	Increase	0.18248	yes
+LPS	TNFa		SMAD7_mrna	Increase	Increase	829.9128	yes
+LPS	TNFa		VEGF_mrna	Decrease	Increase	447.3749	no
+LPS	TNFa		Ym1_mrna	Increase	Increase	0.1829	yes
+LPS	TNFa		SOCS1_mrna	Increase	Increase	626.656	yes
+LPS	TNFa		SOCS3_mrna	Increase	Increase	2444.3319	yes
+LPS	IL1		Arg1_mrna	Increase	Increase	0.17589	yes
+LPS	IL1		CCL17_mrna	Increase	Increase	0.17589	yes
+LPS	IL1		Fizz1_mrna	Increase	Increase	0.17589	yes
+LPS	IL1		IL1_mrna	Increase	Increase	1.87001973251768e+21	yes
+LPS	IL1		IL18_mrna	Decrease	Increase	253.8192	no
+LPS	IL1		IRF1_mrna	Increase	Increase	858.0741	yes
+LPS	IL1		KLF4_mrna	Increase	Increase	0.2506	yes
+LPS	IL1		Myc_mrna	Increase	Increase	0.17589	yes
+LPS	IL1		PPARg_mrna	Increase	Increase	0.17548	yes
+LPS	IL1		SMAD7_mrna	Increase	Increase	858.0741	yes
+LPS	IL1		VEGF_mrna	Decrease	Increase	448.1785	no
+LPS	IL1		Ym1_mrna	Increase	Increase	0.17589	yes
+LPS	IL1		SOCS1_mrna	Increase	Increase	633.1352	yes
+LPS	IL1		SOCS3_mrna	Increase	Increase	2547.348	yes
+LPS	IL4		Arg1_mrna	Increase	Increase	701.3957	yes
+LPS	IL4		CCL17_mrna	Increase	Increase	701.3957	yes
+LPS	IL4		Fizz1_mrna	Increase	Increase	701.3957	yes
+LPS	IL4		IL1_mrna	Increase	Increase	1.233555171825408e+21	yes
+LPS	IL4		IL18_mrna	Decrease	Increase	29.9309	no
+LPS	IL4		IRF1_mrna	Increase	Increase	841.4989	yes
+LPS	IL4		KLF4_mrna	Increase	Increase	805.6	yes
+LPS	IL4		Myc_mrna	Increase	Increase	701.3957	yes
+LPS	IL4		PPARg_mrna	Increase	Increase	1035.9196	yes
+LPS	IL4		SMAD7_mrna	Increase	Increase	841.4989	yes
+LPS	IL4		VEGF_mrna	Decrease	Increase	453.9136	no
+LPS	IL4		Ym1_mrna	Increase	Increase	701.3957	yes
+LPS	IL4		SOCS1_mrna	Increase	Increase	637.3785	yes
+LPS	IL4		SOCS3_mrna	Increase	Increase	2281.8031	yes
+LPS	IL6		Arg1_mrna	Increase	Increase	0.16831	yes
+LPS	IL6		CCL17_mrna	Increase	Increase	0.16831	yes
+LPS	IL6		Fizz1_mrna	Increase	Increase	0.16831	yes
+LPS	IL6		IL1_mrna	Increase	Increase	8.991025949900721e+20	yes
+LPS	IL6		IL18_mrna	Decrease	Increase	219.6772	no
+LPS	IL6		IRF1_mrna	Increase	Increase	730.2827	yes
+LPS	IL6		KLF4_mrna	Increase	Increase	0.22884	yes
+LPS	IL6		Myc_mrna	Increase	Increase	0.16831	yes
+LPS	IL6		PPARg_mrna	Increase	Increase	0.1679	yes
+LPS	IL6		SMAD7_mrna	Increase	Increase	730.2827	yes
+LPS	IL6		VEGF_mrna	Decrease	Increase	838.1173	no
+LPS	IL6		Ym1_mrna	Increase	Increase	0.16831	yes
+LPS	IL6		SOCS1_mrna	Increase	Increase	621.6081	yes
+LPS	IL6		SOCS3_mrna	Increase	Increase	2334.313	yes
+LPS	IL10		Arg1_mrna	Increase	Increase	0.26326	yes
+LPS	IL10		CCL17_mrna	Increase	Increase	0.26326	yes
+LPS	IL10		Fizz1_mrna	Increase	Increase	0.26326	yes
+LPS	IL10		IL1_mrna	Increase	Increase	9.575912510295339e+20	yes
+LPS	IL10		IL18_mrna	Decrease	Increase	215.0212	no
+LPS	IL10		IRF1_mrna	Increase	Increase	735.8442	yes
+LPS	IL10		KLF4_mrna	Increase	Increase	0.36145	yes
+LPS	IL10		Myc_mrna	Increase	Increase	0.26326	yes
+LPS	IL10		PPARg_mrna	Increase	Increase	0.26279	yes
+LPS	IL10		SMAD7_mrna	Increase	Increase	735.8442	yes
+LPS	IL10		VEGF_mrna	Decrease	Increase	680.2191	no
+LPS	IL10		Ym1_mrna	Increase	Increase	0.26326	yes
+LPS	IL10		SOCS1_mrna	Increase	Increase	618.4809	yes
+LPS	IL10		SOCS3_mrna	Increase	Increase	2350.1664	yes
+LPS	IL12		Arg1_mrna	Increase	Increase	0.20554	yes
+LPS	IL12		CCL17_mrna	Increase	Increase	0.20554	yes
+LPS	IL12		Fizz1_mrna	Increase	Increase	0.20554	yes
+LPS	IL12		IL1_mrna	Increase	Increase	1.051906481748566e+21	yes
+LPS	IL12		IL18_mrna	Decrease	Increase	232.6196	no
+LPS	IL12		IRF1_mrna	Increase	Increase	777.2778	yes
+LPS	IL12		KLF4_mrna	Increase	Increase	0.283	yes
+LPS	IL12		Myc_mrna	Increase	Increase	0.20554	yes
+LPS	IL12		PPARg_mrna	Increase	Increase	0.20509	yes
+LPS	IL12		SMAD7_mrna	Increase	Increase	777.2778	yes
+LPS	IL12		VEGF_mrna	Decrease	Increase	451.6509	no
+LPS	IL12		Ym1_mrna	Increase	Increase	0.20554	yes
+LPS	IL12		SOCS1_mrna	Increase	Increase	615.2184	yes
+LPS	IL12		SOCS3_mrna	Increase	Increase	2311.4226	yes
+IFNg	IFNb		Arg1_mrna	Increase	Increase	0.2261	yes
+IFNg	IFNb		CCL17_mrna	Increase	Increase	0.2261	yes
+IFNg	IFNb		Fizz1_mrna	Increase	Increase	0.2261	yes
+IFNg	IFNb		IL1_mrna	Increase	Increase	5.663494583357932e+19	yes
+IFNg	IFNb		IL18_mrna	Decrease	Increase	294.9171	no
+IFNg	IFNb		IRF1_mrna	Increase	Increase	858.2576	yes
+IFNg	IFNb		KLF4_mrna	Increase	Increase	0.26205	yes
+IFNg	IFNb		Myc_mrna	Increase	Increase	0.2261	yes
+IFNg	IFNb		PPARg_mrna	Increase	Increase	0.22554	yes
+IFNg	IFNb		SMAD7_mrna	Increase	Increase	858.2576	yes
+IFNg	IFNb		VEGF_mrna	Decrease	Increase	534.8586	no
+IFNg	IFNb		Ym1_mrna	Increase	Increase	0.2261	yes
+IFNg	IFNb		SOCS1_mrna	Increase	Increase	584.072	yes
+IFNg	IFNb		SOCS3_mrna	Increase	Increase	1292.1174	yes
+IFNg	TNFa		Arg1_mrna	Increase	Increase	0.23605	yes
+IFNg	TNFa		CCL17_mrna	Increase	Increase	0.23605	yes
+IFNg	TNFa		Fizz1_mrna	Increase	Increase	0.23605	yes
+IFNg	TNFa		IL1_mrna	Increase	Increase	3.69097533928209e+20	yes
+IFNg	TNFa		IL18_mrna	Decrease	Increase	300.9117	no
+IFNg	TNFa		IRF1_mrna	Increase	Increase	817.9712	yes
+IFNg	TNFa		KLF4_mrna	Increase	Increase	0.27021	yes
+IFNg	TNFa		Myc_mrna	Increase	Increase	0.23605	yes
+IFNg	TNFa		PPARg_mrna	Increase	Increase	0.23546	yes
+IFNg	TNFa		SMAD7_mrna	Increase	Increase	817.9712	yes
+IFNg	TNFa		VEGF_mrna	Decrease	Increase	496.3957	no
+IFNg	TNFa		Ym1_mrna	Increase	Increase	0.23605	yes
+IFNg	TNFa		SOCS1_mrna	Increase	Increase	567.6947	yes
+IFNg	TNFa		SOCS3_mrna	Increase	Increase	1196.7976	yes
+IFNg	IL1		Arg1_mrna	Increase	Increase	0.18792	yes
+IFNg	IL1		CCL17_mrna	Increase	Increase	0.18792	yes
+IFNg	IL1		Fizz1_mrna	Increase	Increase	0.18792	yes
+IFNg	IL1		IL1_mrna	Increase	Increase	1.190645543101922e+21	yes
+IFNg	IL1		IL18_mrna	Decrease	Increase	304.7122	no
+IFNg	IL1		IRF1_mrna	Increase	Increase	941.0782	yes
+IFNg	IL1		KLF4_mrna	Increase	Increase	0.23409	yes
+IFNg	IL1		Myc_mrna	Increase	Increase	0.18792	yes
+IFNg	IL1		PPARg_mrna	Increase	Increase	0.18745	yes
+IFNg	IL1		SMAD7_mrna	Increase	Increase	941.0782	yes
+IFNg	IL1		VEGF_mrna	Decrease	Increase	573.3986	no
+IFNg	IL1		Ym1_mrna	Increase	Increase	0.18792	yes
+IFNg	IL1		SOCS1_mrna	Increase	Increase	616.3649	yes
+IFNg	IL1		SOCS3_mrna	Increase	Increase	1725.2247	yes
+IFNg	IL4		Arg1_mrna	Increase	Increase	835.526	yes
+IFNg	IL4		CCL17_mrna	Increase	Increase	835.526	yes
+IFNg	IL4		Fizz1_mrna	Increase	Increase	835.526	yes
+IFNg	IL4		IL1_mrna	Increase	Increase	6.019014400848133e+17	yes
+IFNg	IL4		IL18_mrna	Decrease	Increase	129.2647	no
+IFNg	IL4		IRF1_mrna	Increase	Increase	525.4472	yes
+IFNg	IL4		KLF4_mrna	Increase	Increase	851.7191	yes
+IFNg	IL4		Myc_mrna	Increase	Increase	835.526	yes
+IFNg	IL4		PPARg_mrna	Increase	Increase	1086.8804	yes
+IFNg	IL4		SMAD7_mrna	Increase	Increase	525.4472	yes
+IFNg	IL4		VEGF_mrna	Decrease	Increase	508.3802	no
+IFNg	IL4		Ym1_mrna	Increase	Increase	835.526	yes
+IFNg	IL4		SOCS1_mrna	Increase	Increase	589.5983	yes
+IFNg	IL4		SOCS3_mrna	Increase	Increase	834.0202	yes
+IFNg	IL6		Arg1_mrna	Increase	Increase	0.42792	yes
+IFNg	IL6		CCL17_mrna	Increase	Increase	0.42792	yes
+IFNg	IL6		Fizz1_mrna	Increase	Increase	0.42792	yes
+IFNg	IL6		IL1_mrna	Increase	Increase	3.521310390602582e+16	yes
+IFNg	IL6		IL18_mrna	Decrease	Increase	195.9746	no
+IFNg	IL6		IRF1_mrna	Increase	Increase	171.9328	yes
+IFNg	IL6		KLF4_mrna	Increase	Increase	0.44733	yes
+IFNg	IL6		Myc_mrna	Increase	Increase	0.42792	yes
+IFNg	IL6		PPARg_mrna	Increase	Increase	0.4271	yes
+IFNg	IL6		SMAD7_mrna	Increase	Increase	171.9328	yes
+IFNg	IL6		VEGF_mrna	Decrease	Increase	774.0472	no
+IFNg	IL6		Ym1_mrna	Increase	Increase	0.42792	yes
+IFNg	IL6		SOCS1_mrna	Increase	Increase	390.5287	yes
+IFNg	IL6		SOCS3_mrna	Increase	Increase	967.042	yes
+IFNg	IL10		Arg1_mrna	Increase	Increase	0.46319	yes
+IFNg	IL10		CCL17_mrna	Increase	Increase	0.46319	yes
+IFNg	IL10		Fizz1_mrna	Increase	Increase	0.46319	yes
+IFNg	IL10		IL1_mrna	Increase	Increase	3.177875308381543e+18	yes
+IFNg	IL10		IL18_mrna	Decrease	Increase	169.3709	no
+IFNg	IL10		IRF1_mrna	Increase	Increase	548.4114	yes
+IFNg	IL10		KLF4_mrna	Increase	Increase	0.5297	yes
+IFNg	IL10		Myc_mrna	Increase	Increase	0.46319	yes
+IFNg	IL10		PPARg_mrna	Increase	Increase	0.46254	yes
+IFNg	IL10		SMAD7_mrna	Increase	Increase	548.4114	yes
+IFNg	IL10		VEGF_mrna	Decrease	Increase	930.963	no
+IFNg	IL10		Ym1_mrna	Increase	Increase	0.46319	yes
+IFNg	IL10		SOCS1_mrna	Increase	Increase	558.07	yes
+IFNg	IL10		SOCS3_mrna	Increase	Increase	1500.5408	yes
+IFNg	IL12		Arg1_mrna	Increase	Increase	0.3006	yes
+IFNg	IL12		CCL17_mrna	Increase	Increase	0.3006	yes
+IFNg	IL12		Fizz1_mrna	Increase	Increase	0.3006	yes
+IFNg	IL12		IL1_mrna	Increase	Increase	3.452592216434627e+19	yes
+IFNg	IL12		IL18_mrna	Decrease	Increase	281.8396	no
+IFNg	IL12		IRF1_mrna	Increase	Increase	715.9834	yes
+IFNg	IL12		KLF4_mrna	Increase	Increase	0.33977	yes
+IFNg	IL12		Myc_mrna	Increase	Increase	0.3006	yes
+IFNg	IL12		PPARg_mrna	Increase	Increase	0.29993	yes
+IFNg	IL12		SMAD7_mrna	Increase	Increase	715.9834	yes
+IFNg	IL12		VEGF_mrna	Decrease	Increase	565.9422	no
+IFNg	IL12		Ym1_mrna	Increase	Increase	0.3006	yes
+IFNg	IL12		SOCS1_mrna	Increase	Increase	542.0469	yes
+IFNg	IL12		SOCS3_mrna	Increase	Increase	1178.425	yes
+IFNb	TNFa		Arg1_mrna	Increase	Increase	0.20527	yes
+IFNb	TNFa		CCL17_mrna	Increase	Increase	0.20527	yes
+IFNb	TNFa		Fizz1_mrna	Increase	Increase	0.20527	yes
+IFNb	TNFa		IL1_mrna	Increase	Increase	3.853960616634213e+20	yes
+IFNb	TNFa		IL18_mrna	Decrease	Increase	280.4079	no
+IFNb	TNFa		IRF1_mrna	Increase	Increase	776.5994	yes
+IFNb	TNFa		KLF4_mrna	Increase	Increase	0.24819	yes
+IFNb	TNFa		Myc_mrna	Increase	Increase	0.20527	yes
+IFNb	TNFa		PPARg_mrna	Increase	Increase	0.20475	yes
+IFNb	TNFa		SMAD7_mrna	Increase	Increase	776.5994	yes
+IFNb	TNFa		VEGF_mrna	Decrease	Increase	207.0522	no
+IFNb	TNFa		Ym1_mrna	Increase	Increase	0.20527	yes
+IFNb	TNFa		SOCS1_mrna	Increase	Increase	550.1664	yes
+IFNb	TNFa		SOCS3_mrna	Increase	Increase	1341.2051	yes
+IFNb	IL1		Arg1_mrna	Increase	Increase	0.16224	yes
+IFNb	IL1		CCL17_mrna	Increase	Increase	0.16224	yes
+IFNb	IL1		Fizz1_mrna	Increase	Increase	0.16224	yes
+IFNb	IL1		IL1_mrna	Increase	Increase	1.14499073889488e+21	yes
+IFNb	IL1		IL18_mrna	Decrease	Increase	281.4417	no
+IFNb	IL1		IRF1_mrna	Increase	Increase	891.4917	yes
+IFNb	IL1		KLF4_mrna	Increase	Increase	0.21657	yes
+IFNb	IL1		Myc_mrna	Increase	Increase	0.16224	yes
+IFNb	IL1		PPARg_mrna	Increase	Increase	0.16183	yes
+IFNb	IL1		SMAD7_mrna	Increase	Increase	891.4917	yes
+IFNb	IL1		VEGF_mrna	Decrease	Increase	321.1967	no
+IFNb	IL1		Ym1_mrna	Increase	Increase	0.16224	yes
+IFNb	IL1		SOCS1_mrna	Increase	Increase	614.9728	yes
+IFNb	IL1		SOCS3_mrna	Increase	Increase	2061.0647	yes
+IFNb	IL4		Arg1_mrna	Increase	Increase	843.97	yes
+IFNb	IL4		CCL17_mrna	Increase	Increase	843.97	yes
+IFNb	IL4		Fizz1_mrna	Increase	Increase	843.97	yes
+IFNb	IL4		IL1_mrna	Increase	Increase	1.886073860229799e+16	yes
+IFNb	IL4		IL18_mrna	Decrease	Increase	26.7314	no
+IFNb	IL4		IRF1_mrna	Increase	Increase	518.1018	yes
+IFNb	IL4		KLF4_mrna	Increase	Increase	859.9916	yes
+IFNb	IL4		Myc_mrna	Increase	Increase	843.97	yes
+IFNb	IL4		PPARg_mrna	Increase	Increase	1091.2182	yes
+IFNb	IL4		SMAD7_mrna	Increase	Increase	518.1018	yes
+IFNb	IL4		VEGF_mrna	Decrease	Increase	10.5067	no
+IFNb	IL4		Ym1_mrna	Increase	Increase	843.97	yes
+IFNb	IL4		SOCS1_mrna	Increase	Increase	559.8207	yes
+IFNb	IL4		SOCS3_mrna	Increase	Increase	406.5469	yes
+IFNb	IL6		Arg1_mrna	Increase	Increase	0.1724	yes
+IFNb	IL6		CCL17_mrna	Increase	Increase	0.1724	yes
+IFNb	IL6		Fizz1_mrna	Increase	Increase	0.1724	yes
+IFNb	IL6		IL1_mrna	Increase	Increase	1.263886529223661e+19	yes
+IFNb	IL6		IL18_mrna	Decrease	Increase	233.4438	no
+IFNb	IL6		IRF1_mrna	Increase	Increase	600.6035	yes
+IFNb	IL6		KLF4_mrna	Increase	Increase	0.19902	yes
+IFNb	IL6		Myc_mrna	Increase	Increase	0.1724	yes
+IFNb	IL6		PPARg_mrna	Increase	Increase	0.17192	yes
+IFNb	IL6		SMAD7_mrna	Increase	Increase	600.6035	yes
+IFNb	IL6		VEGF_mrna	Decrease	Increase	697.0621	no
+IFNb	IL6		Ym1_mrna	Increase	Increase	0.1724	yes
+IFNb	IL6		SOCS1_mrna	Increase	Increase	535.4909	yes
+IFNb	IL6		SOCS3_mrna	Increase	Increase	1382.0378	yes
+IFNb	IL10		Arg1_mrna	Increase	Increase	0.37082	yes
+IFNb	IL10		CCL17_mrna	Increase	Increase	0.37082	yes
+IFNb	IL10		Fizz1_mrna	Increase	Increase	0.37082	yes
+IFNb	IL10		IL1_mrna	Increase	Increase	6.353168643605066e+18	yes
+IFNb	IL10		IL18_mrna	Decrease	Increase	171.8576	no
+IFNb	IL10		IRF1_mrna	Increase	Increase	589.772	yes
+IFNb	IL10		KLF4_mrna	Increase	Increase	0.43283	yes
+IFNb	IL10		Myc_mrna	Increase	Increase	0.37082	yes
+IFNb	IL10		PPARg_mrna	Increase	Increase	0.37017	yes
+IFNb	IL10		SMAD7_mrna	Increase	Increase	589.772	yes
+IFNb	IL10		VEGF_mrna	Decrease	Increase	629.3796	no
+IFNb	IL10		Ym1_mrna	Increase	Increase	0.37082	yes
+IFNb	IL10		SOCS1_mrna	Increase	Increase	527.2195	yes
+IFNb	IL10		SOCS3_mrna	Increase	Increase	1394.3891	yes
+IFNb	IL12		Arg1_mrna	Increase	Increase	0.24792	yes
+IFNb	IL12		CCL17_mrna	Increase	Increase	0.24792	yes
+IFNb	IL12		Fizz1_mrna	Increase	Increase	0.24792	yes
+IFNb	IL12		IL1_mrna	Increase	Increase	3.600447486014072e+19	yes
+IFNb	IL12		IL18_mrna	Decrease	Increase	260.6988	no
+IFNb	IL12		IRF1_mrna	Increase	Increase	725.7044	yes
+IFNb	IL12		KLF4_mrna	Increase	Increase	0.29298	yes
+IFNb	IL12		Myc_mrna	Increase	Increase	0.24792	yes
+IFNb	IL12		PPARg_mrna	Increase	Increase	0.24734	yes
+IFNb	IL12		SMAD7_mrna	Increase	Increase	725.7044	yes
+IFNb	IL12		VEGF_mrna	Decrease	Increase	348.5251	no
+IFNb	IL12		Ym1_mrna	Increase	Increase	0.24792	yes
+IFNb	IL12		SOCS1_mrna	Increase	Increase	537.6395	yes
+IFNb	IL12		SOCS3_mrna	Increase	Increase	1282.4908	yes
+TNFa	IL1		Arg1_mrna	Increase	Increase	0.15405	yes
+TNFa	IL1		CCL17_mrna	Increase	Increase	0.15405	yes
+TNFa	IL1		Fizz1_mrna	Increase	Increase	0.15405	yes
+TNFa	IL1		IL1_mrna	Increase	Increase	2.145369575098296e+21	yes
+TNFa	IL1		IL18_mrna	Decrease	Increase	297.0766	no
+TNFa	IL1		IRF1_mrna	Increase	Increase	904.1508	yes
+TNFa	IL1		KLF4_mrna	Increase	Increase	0.2009	yes
+TNFa	IL1		Myc_mrna	Increase	Increase	0.15405	yes
+TNFa	IL1		PPARg_mrna	Increase	Increase	0.15364	yes
+TNFa	IL1		SMAD7_mrna	Increase	Increase	904.1508	yes
+TNFa	IL1		VEGF_mrna	Decrease	Increase	352.0628	no
+TNFa	IL1		Ym1_mrna	Increase	Increase	0.15405	yes
+TNFa	IL1		SOCS1_mrna	Increase	Increase	611.8115	yes
+TNFa	IL1		SOCS3_mrna	Increase	Increase	1913.4437	yes
+TNFa	IL4		Arg1_mrna	Increase	Increase	824.4405	yes
+TNFa	IL4		CCL17_mrna	Increase	Increase	824.4405	yes
+TNFa	IL4		Fizz1_mrna	Increase	Increase	824.4405	yes
+TNFa	IL4		IL1_mrna	Increase	Increase	8.623739297048373e+19	yes
+TNFa	IL4		IL18_mrna	Decrease	Increase	119.6427	no
+TNFa	IL4		IRF1_mrna	Increase	Increase	527.5583	yes
+TNFa	IL4		KLF4_mrna	Increase	Increase	867.7341	yes
+TNFa	IL4		Myc_mrna	Increase	Increase	824.4405	yes
+TNFa	IL4		PPARg_mrna	Increase	Increase	1089.0525	yes
+TNFa	IL4		SMAD7_mrna	Increase	Increase	527.5583	yes
+TNFa	IL4		VEGF_mrna	Decrease	Increase	126.1114	no
+TNFa	IL4		Ym1_mrna	Increase	Increase	824.4405	yes
+TNFa	IL4		SOCS1_mrna	Increase	Increase	585.2032	yes
+TNFa	IL4		SOCS3_mrna	Increase	Increase	1118.5338	yes
+TNFa	IL6		Arg1_mrna	Increase	Increase	0.26928	yes
+TNFa	IL6		CCL17_mrna	Increase	Increase	0.26928	yes
+TNFa	IL6		Fizz1_mrna	Increase	Increase	0.26928	yes
+TNFa	IL6		IL1_mrna	Increase	Increase	6.053002332406895e+19	yes
+TNFa	IL6		IL18_mrna	Decrease	Increase	221.1912	no
+TNFa	IL6		IRF1_mrna	Increase	Increase	368.6882	yes
+TNFa	IL6		KLF4_mrna	Increase	Increase	0.30801	yes
+TNFa	IL6		Myc_mrna	Increase	Increase	0.26928	yes
+TNFa	IL6		PPARg_mrna	Increase	Increase	0.26865	yes
+TNFa	IL6		SMAD7_mrna	Increase	Increase	368.6882	yes
+TNFa	IL6		VEGF_mrna	Decrease	Increase	621.0568	no
+TNFa	IL6		Ym1_mrna	Increase	Increase	0.26928	yes
+TNFa	IL6		SOCS1_mrna	Increase	Increase	451.8295	yes
+TNFa	IL6		SOCS3_mrna	Increase	Increase	1281.1965	yes
+TNFa	IL10		Arg1_mrna	Increase	Increase	0.59038	yes
+TNFa	IL10		CCL17_mrna	Increase	Increase	0.59038	yes
+TNFa	IL10		Fizz1_mrna	Increase	Increase	0.59038	yes
+TNFa	IL10		IL1_mrna	Increase	Increase	3.728636700841824e+19	yes
+TNFa	IL10		IL18_mrna	Decrease	Increase	101.9007	no
+TNFa	IL10		IRF1_mrna	Increase	Increase	289.139	yes
+TNFa	IL10		KLF4_mrna	Increase	Increase	0.67681	yes
+TNFa	IL10		Myc_mrna	Increase	Increase	0.59038	yes
+TNFa	IL10		PPARg_mrna	Increase	Increase	0.58991	yes
+TNFa	IL10		SMAD7_mrna	Increase	Increase	289.139	yes
+TNFa	IL10		VEGF_mrna	Decrease	Increase	571.3896	no
+TNFa	IL10		Ym1_mrna	Increase	Increase	0.59038	yes
+TNFa	IL10		SOCS1_mrna	Increase	Increase	418.1978	yes
+TNFa	IL10		SOCS3_mrna	Increase	Increase	1258.166	yes
+TNFa	IL12		Arg1_mrna	Increase	Increase	0.29223	yes
+TNFa	IL12		CCL17_mrna	Increase	Increase	0.29223	yes
+TNFa	IL12		Fizz1_mrna	Increase	Increase	0.29223	yes
+TNFa	IL12		IL1_mrna	Increase	Increase	2.453554995197575e+20	yes
+TNFa	IL12		IL18_mrna	Decrease	Increase	272.6256	no
+TNFa	IL12		IRF1_mrna	Increase	Increase	631.3369	yes
+TNFa	IL12		KLF4_mrna	Increase	Increase	0.34044	yes
+TNFa	IL12		Myc_mrna	Increase	Increase	0.29223	yes
+TNFa	IL12		PPARg_mrna	Increase	Increase	0.2916	yes
+TNFa	IL12		SMAD7_mrna	Increase	Increase	631.3369	yes
+TNFa	IL12		VEGF_mrna	Decrease	Increase	297.6504	no
+TNFa	IL12		Ym1_mrna	Increase	Increase	0.29223	yes
+TNFa	IL12		SOCS1_mrna	Increase	Increase	493.0935	yes
+TNFa	IL12		SOCS3_mrna	Increase	Increase	1162.2611	yes
+IL1	IL4		Arg1_mrna	Increase	Increase	967.8089	yes
+IL1	IL4		CCL17_mrna	Increase	Increase	967.8089	yes
+IL1	IL4		Fizz1_mrna	Increase	Increase	967.8089	yes
+IL1	IL4		IL1_mrna	Increase	Increase	11.293	yes
+IL1	IL4		IL18_mrna	Decrease	Increase	0.40706	no
+IL1	IL4		IRF1_mrna	Increase	Increase	1.325	yes
+IL1	IL4		KLF4_mrna	Increase	Increase	967.8468	yes
+IL1	IL4		Myc_mrna	Increase	Increase	967.8089	yes
+IL1	IL4		PPARg_mrna	Increase	Increase	1137.4538	yes
+IL1	IL4		SMAD7_mrna	Increase	Increase	1.325	yes
+IL1	IL4		VEGF_mrna	Decrease	Increase	0.60322	no
+IL1	IL4		Ym1_mrna	Increase	Increase	967.8089	yes
+IL1	IL4		SOCS1_mrna	Increase	Increase	536.6024	yes
+IL1	IL4		SOCS3_mrna	Increase	Increase	1.9385	yes
+IL1	IL6		Arg1_mrna	Increase	Increase	0.13705	yes
+IL1	IL6		CCL17_mrna	Increase	Increase	0.13705	yes
+IL1	IL6		Fizz1_mrna	Increase	Increase	0.13705	yes
+IL1	IL6		IL1_mrna	Increase	Increase	9.94914662035461e+20	yes
+IL1	IL6		IL18_mrna	Decrease	Increase	262.0264	no
+IL1	IL6		IRF1_mrna	Increase	Increase	740.7491	yes
+IL1	IL6		KLF4_mrna	Increase	Increase	0.17715	yes
+IL1	IL6		Myc_mrna	Increase	Increase	0.13705	yes
+IL1	IL6		PPARg_mrna	Increase	Increase	0.13667	yes
+IL1	IL6		SMAD7_mrna	Increase	Increase	740.7491	yes
+IL1	IL6		VEGF_mrna	Decrease	Increase	693.5212	no
+IL1	IL6		Ym1_mrna	Increase	Increase	0.13705	yes
+IL1	IL6		SOCS1_mrna	Increase	Increase	600.8175	yes
+IL1	IL6		SOCS3_mrna	Increase	Increase	1995.15	yes
+IL1	IL10		Arg1_mrna	Increase	Increase	0.28746	yes
+IL1	IL10		CCL17_mrna	Increase	Increase	0.28746	yes
+IL1	IL10		Fizz1_mrna	Increase	Increase	0.28746	yes
+IL1	IL10		IL1_mrna	Increase	Increase	7.688225326148915e+20	yes
+IL1	IL10		IL18_mrna	Decrease	Increase	195.6734	no
+IL1	IL10		IRF1_mrna	Increase	Increase	657.6088	yes
+IL1	IL10		KLF4_mrna	Increase	Increase	0.38761	yes
+IL1	IL10		Myc_mrna	Increase	Increase	0.28746	yes
+IL1	IL10		PPARg_mrna	Increase	Increase	0.28697	yes
+IL1	IL10		SMAD7_mrna	Increase	Increase	657.6088	yes
+IL1	IL10		VEGF_mrna	Decrease	Increase	649.3029	no
+IL1	IL10		Ym1_mrna	Increase	Increase	0.28746	yes
+IL1	IL10		SOCS1_mrna	Increase	Increase	602.5906	yes
+IL1	IL10		SOCS3_mrna	Increase	Increase	2230.7638	yes
+IL1	IL12		Arg1_mrna	Increase	Increase	0.19155	yes
+IL1	IL12		CCL17_mrna	Increase	Increase	0.19155	yes
+IL1	IL12		Fizz1_mrna	Increase	Increase	0.19155	yes
+IL1	IL12		IL1_mrna	Increase	Increase	1.216461614729822e+21	yes
+IL1	IL12		IL18_mrna	Decrease	Increase	273.2474	no
+IL1	IL12		IRF1_mrna	Increase	Increase	810.7061	yes
+IL1	IL12		KLF4_mrna	Increase	Increase	0.25109	yes
+IL1	IL12		Myc_mrna	Increase	Increase	0.19155	yes
+IL1	IL12		PPARg_mrna	Increase	Increase	0.19109	yes
+IL1	IL12		SMAD7_mrna	Increase	Increase	810.7061	yes
+IL1	IL12		VEGF_mrna	Decrease	Increase	368.0637	no
+IL1	IL12		Ym1_mrna	Increase	Increase	0.19155	yes
+IL1	IL12		SOCS1_mrna	Increase	Increase	598.6588	yes
+IL1	IL12		SOCS3_mrna	Increase	Increase	1953.896	yes
+IL4	IL6		Arg1_mrna	Increase	Increase	810.9199	yes
+IL4	IL6		CCL17_mrna	Increase	Increase	810.9199	yes
+IL4	IL6		Fizz1_mrna	Increase	Increase	810.9199	yes
+IL4	IL6		IL1_mrna	Increase	Increase	129.4009	yes
+IL4	IL6		IL18_mrna	Decrease	Increase	34.6739	no
+IL4	IL6		IRF1_mrna	Increase	Increase	0.85373	yes
+IL4	IL6		KLF4_mrna	Increase	Increase	810.9833	yes
+IL4	IL6		Myc_mrna	Increase	Increase	810.9199	yes
+IL4	IL6		PPARg_mrna	Increase	Increase	1068.0496	yes
+IL4	IL6		SMAD7_mrna	Increase	Increase	0.85373	yes
+IL4	IL6		VEGF_mrna	Decrease	Increase	697.8201	no
+IL4	IL6		Ym1_mrna	Increase	Increase	810.9199	yes
+IL4	IL6		SOCS1_mrna	Increase	Increase	544.6044	yes
+IL4	IL6		SOCS3_mrna	Increase	Increase	697.313	yes
+IL4	IL10		Arg1_mrna	Increase	Increase	954.926	yes
+IL4	IL10		CCL17_mrna	Increase	Increase	954.926	yes
+IL4	IL10		Fizz1_mrna	Increase	Increase	954.926	yes
+IL4	IL10		IL1_mrna	Increase	Decrease	0.029868	no
+IL4	IL10		IL18_mrna	Decrease	Decrease	0.011997	yes
+IL4	IL10		IRF1_mrna	Increase	Increase	0.33976	yes
+IL4	IL10		KLF4_mrna	Increase	Increase	954.926	yes
+IL4	IL10		Myc_mrna	Increase	Increase	954.926	yes
+IL4	IL10		PPARg_mrna	Increase	Increase	1133.4743	yes
+IL4	IL10		SMAD7_mrna	Increase	Increase	0.33976	yes
+IL4	IL10		VEGF_mrna	Decrease	Increase	562.9259	no
+IL4	IL10		Ym1_mrna	Increase	Increase	954.926	yes
+IL4	IL10		SOCS1_mrna	Increase	Increase	575.2951	yes
+IL4	IL10		SOCS3_mrna	Increase	Increase	561.6095	yes
+IL4	IL12		Arg1_mrna	Increase	Increase	933.8622	yes
+IL4	IL12		CCL17_mrna	Increase	Increase	933.8622	yes
+IL4	IL12		Fizz1_mrna	Increase	Increase	933.8622	yes
+IL4	IL12		IL1_mrna	Increase	Increase	178640676495.9241	yes
+IL4	IL12		IL18_mrna	Decrease	Increase	65.7136	no
+IL4	IL12		IRF1_mrna	Increase	Increase	184.2993	yes
+IL4	IL12		KLF4_mrna	Increase	Increase	935.7893	yes
+IL4	IL12		Myc_mrna	Increase	Increase	933.8622	yes
+IL4	IL12		PPARg_mrna	Increase	Increase	1126.7153	yes
+IL4	IL12		SMAD7_mrna	Increase	Increase	184.2993	yes
+IL4	IL12		VEGF_mrna	Decrease	Increase	203.0546	no
+IL4	IL12		Ym1_mrna	Increase	Increase	933.8622	yes
+IL4	IL12		SOCS1_mrna	Increase	Increase	546.9706	yes
+IL4	IL12		SOCS3_mrna	Increase	Increase	258.0858	yes
+IL6	IL10		Arg1_mrna	Increase	Increase	0.53763	yes
+IL6	IL10		CCL17_mrna	Increase	Increase	0.53763	yes
+IL6	IL10		Fizz1_mrna	Increase	Increase	0.53763	yes
+IL6	IL10		IL1_mrna	Increase	Decrease	0.014761	no
+IL6	IL10		IL18_mrna	Decrease	Increase	4.9321	no
+IL6	IL10		IRF1_mrna	Increase	Increase	0.25349	yes
+IL6	IL10		KLF4_mrna	Increase	Increase	0.53763	yes
+IL6	IL10		Myc_mrna	Increase	Increase	0.53763	yes
+IL6	IL10		PPARg_mrna	Increase	Increase	0.53674	yes
+IL6	IL10		SMAD7_mrna	Increase	Increase	0.25349	yes
+IL6	IL10		VEGF_mrna	Decrease	Increase	1027.2197	no
+IL6	IL10		Ym1_mrna	Increase	Increase	0.53763	yes
+IL6	IL10		SOCS1_mrna	Increase	Increase	455.6072	yes
+IL6	IL10		SOCS3_mrna	Increase	Increase	1024.8007	yes
+IL6	IL12		Arg1_mrna	Increase	Increase	0.51246	yes
+IL6	IL12		CCL17_mrna	Increase	Increase	0.51246	yes
+IL6	IL12		Fizz1_mrna	Increase	Increase	0.51246	yes
+IL6	IL12		IL1_mrna	Increase	Increase	35610480032671.07	yes
+IL6	IL12		IL18_mrna	Decrease	Increase	148.2718	no
+IL6	IL12		IRF1_mrna	Increase	Increase	54.1095	yes
+IL6	IL12		KLF4_mrna	Increase	Increase	0.52213	yes
+IL6	IL12		Myc_mrna	Increase	Increase	0.51246	yes
+IL6	IL12		PPARg_mrna	Increase	Increase	0.5116	yes
+IL6	IL12		SMAD7_mrna	Increase	Increase	54.1095	yes
+IL6	IL12		VEGF_mrna	Decrease	Increase	699.2993	no
+IL6	IL12		Ym1_mrna	Increase	Increase	0.51246	yes
+IL6	IL12		SOCS1_mrna	Increase	Increase	325.57	yes
+IL6	IL12		SOCS3_mrna	Increase	Increase	781.4815	yes
+IL10	IL12		Arg1_mrna	Increase	Increase	0.82578	yes
+IL10	IL12		CCL17_mrna	Increase	Increase	0.82578	yes
+IL10	IL12		Fizz1_mrna	Increase	Increase	0.82578	yes
+IL10	IL12		IL1_mrna	Increase	Increase	292682277184.0112	yes
+IL10	IL12		IL18_mrna	Decrease	Increase	54.9442	no
+IL10	IL12		IRF1_mrna	Increase	Increase	211.4669	yes
+IL10	IL12		KLF4_mrna	Increase	Increase	0.83815	yes
+IL10	IL12		Myc_mrna	Increase	Increase	0.82578	yes
+IL10	IL12		PPARg_mrna	Increase	Increase	0.82535	yes
+IL10	IL12		SMAD7_mrna	Increase	Increase	211.4669	yes
+IL10	IL12		VEGF_mrna	Decrease	Increase	775.1019	no
+IL10	IL12		Ym1_mrna	Increase	Increase	0.82578	yes
+IL10	IL12		SOCS1_mrna	Increase	Increase	383.1563	yes
+IL10	IL12		SOCS3_mrna	Increase	Increase	837.5623	yes
+LPS			Arg1_mrna	Increase	Increase	0.19996	yes
+LPS			CCL17_mrna	Increase	Increase	0.19996	yes
+LPS			Fizz1_mrna	Increase	Increase	0.19996	yes
+LPS			IL1_mrna	Increase	Increase	1.091837137906674e+21	yes
+LPS			IL18_mrna	Decrease	Increase	226.2347	no
+LPS			IRF1_mrna	Increase	Increase	756.3159	yes
+LPS			KLF4_mrna	Increase	Increase	0.2754	yes
+LPS			Myc_mrna	Increase	Increase	0.19996	yes
+LPS			PPARg_mrna	Increase	Increase	0.19951	yes
+LPS			SMAD7_mrna	Increase	Increase	756.3159	yes
+LPS			VEGF_mrna	Decrease	Increase	384.3845	no
+LPS			Ym1_mrna	Increase	Increase	0.19996	yes
+LPS			SOCS1_mrna	Increase	Increase	610.7832	yes
+LPS			SOCS3_mrna	Increase	Increase	2297.1212	yes
+IFNg			Arg1_mrna	Increase	Increase	0.31811	yes
+IFNg			CCL17_mrna	Increase	Increase	0.31811	yes
+IFNg			Fizz1_mrna	Increase	Increase	0.31811	yes
+IFNg			IL1_mrna	Increase	Increase	2.888301497389624e+19	yes
+IFNg			IL18_mrna	Decrease	Increase	274.7731	no
+IFNg			IRF1_mrna	Increase	Increase	676.3219	yes
+IFNg			KLF4_mrna	Increase	Increase	0.35961	yes
+IFNg			Myc_mrna	Increase	Increase	0.31811	yes
+IFNg			PPARg_mrna	Increase	Increase	0.31744	yes
+IFNg			SMAD7_mrna	Increase	Increase	676.3219	yes
+IFNg			VEGF_mrna	Decrease	Increase	546.5181	no
+IFNg			Ym1_mrna	Increase	Increase	0.31811	yes
+IFNg			SOCS1_mrna	Increase	Increase	527.7691	yes
+IFNg			SOCS3_mrna	Increase	Increase	1164.6202	yes
+IFNb			Arg1_mrna	Increase	Increase	0.26476	yes
+IFNb			CCL17_mrna	Increase	Increase	0.26476	yes
+IFNb			Fizz1_mrna	Increase	Increase	0.26476	yes
+IFNb			IL1_mrna	Increase	Increase	2.468536063313657e+19	yes
+IFNb			IL18_mrna	Decrease	Increase	234.1515	no
+IFNb			IRF1_mrna	Increase	Increase	659.0982	yes
+IFNb			KLF4_mrna	Increase	Increase	0.31345	yes
+IFNb			Myc_mrna	Increase	Increase	0.26476	yes
+IFNb			PPARg_mrna	Increase	Increase	0.26416	yes
+IFNb			SMAD7_mrna	Increase	Increase	659.0982	yes
+IFNb			VEGF_mrna	Decrease	Increase	226.0242	no
+IFNb			Ym1_mrna	Increase	Increase	0.26476	yes
+IFNb			SOCS1_mrna	Increase	Increase	502.9413	yes
+IFNb			SOCS3_mrna	Increase	Increase	1216.457	yes
+TNFa			Arg1_mrna	Increase	Increase	0.37092	yes
+TNFa			CCL17_mrna	Increase	Increase	0.37092	yes
+TNFa			Fizz1_mrna	Increase	Increase	0.37092	yes
+TNFa			IL1_mrna	Increase	Increase	1.510638629007779e+20	yes
+TNFa			IL18_mrna	Decrease	Increase	247.5836	no
+TNFa			IRF1_mrna	Increase	Increase	490.1658	yes
+TNFa			KLF4_mrna	Increase	Increase	0.43218	yes
+TNFa			Myc_mrna	Increase	Increase	0.37092	yes
+TNFa			PPARg_mrna	Increase	Increase	0.37026	yes
+TNFa			SMAD7_mrna	Increase	Increase	490.1658	yes
+TNFa			VEGF_mrna	Decrease	Increase	151.9637	no
+TNFa			Ym1_mrna	Increase	Increase	0.37092	yes
+TNFa			SOCS1_mrna	Increase	Increase	413.5235	yes
+TNFa			SOCS3_mrna	Increase	Increase	1066.1284	yes
+IL1			Arg1_mrna	Increase	Increase	0.19449	yes
+IL1			CCL17_mrna	Increase	Increase	0.19449	yes
+IL1			Fizz1_mrna	Increase	Increase	0.19449	yes
+IL1			IL1_mrna	Increase	Increase	1.198373773806928e+21	yes
+IL1			IL18_mrna	Decrease	Increase	256.5572	no
+IL1			IRF1_mrna	Increase	Increase	761.9122	yes
+IL1			KLF4_mrna	Increase	Increase	0.25853	yes
+IL1			Myc_mrna	Increase	Increase	0.19449	yes
+IL1			PPARg_mrna	Increase	Increase	0.19403	yes
+IL1			SMAD7_mrna	Increase	Increase	761.9122	yes
+IL1			VEGF_mrna	Decrease	Increase	301.509	no
+IL1			Ym1_mrna	Increase	Increase	0.19449	yes
+IL1			SOCS1_mrna	Increase	Increase	592.8014	yes
+IL1			SOCS3_mrna	Increase	Increase	2025.341	yes
+IL4			Arg1_mrna	Increase	Increase	967.8329	yes
+IL4			CCL17_mrna	Increase	Increase	967.8329	yes
+IL4			Fizz1_mrna	Increase	Increase	967.8329	yes
+IL4			IL1_mrna	Increase	Increase	6.329	yes
+IL4			IL18_mrna	Decrease	Increase	0.40675	no
+IL4			IRF1_mrna	Increase	Increase	1.1208	yes
+IL4			KLF4_mrna	Increase	Increase	967.8704	yes
+IL4			Myc_mrna	Increase	Increase	967.8329	yes
+IL4			PPARg_mrna	Increase	Increase	1137.4609	yes
+IL4			SMAD7_mrna	Increase	Increase	1.1208	yes
+IL4			VEGF_mrna	Decrease	Increase	0.60321	no
+IL4			Ym1_mrna	Increase	Increase	967.8329	yes
+IL4			SOCS1_mrna	Increase	Increase	536.6149	yes
+IL4			SOCS3_mrna	Increase	Increase	1.9221	yes
+IL6			Arg1_mrna	Increase	Increase	0.54521	yes
+IL6			CCL17_mrna	Increase	Increase	0.54521	yes
+IL6			Fizz1_mrna	Increase	Increase	0.54521	yes
+IL6			IL1_mrna	Increase	Increase	26409091.5428	yes
+IL6			IL18_mrna	Decrease	Increase	106.9612	no
+IL6			IRF1_mrna	Increase	Increase	1.0699	yes
+IL6			KLF4_mrna	Increase	Increase	0.54827	yes
+IL6			Myc_mrna	Increase	Increase	0.54521	yes
+IL6			PPARg_mrna	Increase	Increase	0.54433	yes
+IL6			SMAD7_mrna	Increase	Increase	1.0699	yes
+IL6			VEGF_mrna	Decrease	Increase	610.1084	no
+IL6			Ym1_mrna	Increase	Increase	0.54521	yes
+IL6			SOCS1_mrna	Increase	Increase	274.9826	yes
+IL6			SOCS3_mrna	Increase	Increase	634.6695	yes
+IL10			Arg1_mrna	Increase	Increase	1.0557	yes
+IL10			CCL17_mrna	Increase	Increase	1.0557	yes
+IL10			Fizz1_mrna	Increase	Increase	1.0557	yes
+IL10			IL1_mrna	Increase	Increase	0.33811	yes
+IL10			IL18_mrna	Decrease	Decrease	0.066884	yes
+IL10			IRF1_mrna	Increase	Increase	0.7353	yes
+IL10			KLF4_mrna	Increase	Increase	1.0557	yes
+IL10			Myc_mrna	Increase	Increase	1.0557	yes
+IL10			PPARg_mrna	Increase	Increase	1.0559	yes
+IL10			SMAD7_mrna	Increase	Increase	0.7353	yes
+IL10			VEGF_mrna	Decrease	Increase	563.4416	no
+IL10			Ym1_mrna	Increase	Increase	1.0557	yes
+IL10			SOCS1_mrna	Increase	Increase	250.2176	yes
+IL10			SOCS3_mrna	Increase	Increase	562.1147	yes
+IL12			Arg1_mrna	Increase	Increase	0.59857	yes
+IL12			CCL17_mrna	Increase	Increase	0.59857	yes
+IL12			Fizz1_mrna	Increase	Increase	0.59857	yes
+IL12			IL1_mrna	Increase	Increase	7.297335586526317e+17	yes
+IL12			IL18_mrna	Decrease	Increase	195.0352	no
+IL12			IRF1_mrna	Increase	Increase	334.633	yes
+IL12			KLF4_mrna	Increase	Increase	0.64374	yes
+IL12			Myc_mrna	Increase	Increase	0.59857	yes
+IL12			PPARg_mrna	Increase	Increase	0.59792	yes
+IL12			SMAD7_mrna	Increase	Increase	334.633	yes
+IL12			VEGF_mrna	Decrease	Increase	390.16	no
+IL12			Ym1_mrna	Increase	Increase	0.59857	yes
+IL12			SOCS1_mrna	Increase	Increase	334.8147	yes
+IL12			SOCS3_mrna	Increase	Increase	771.2357	yes
