@@ -1,4 +1,54 @@
-% Code orginally from Astor Liu runValidation.m (11/2/2017)
+% ./Model Simulation/M1_M2_Validation.m
+% 
+% This script generates model responses to LPS+IFNg and IL4 stimulation.
+% The output includes Fig 2A and 2B.
+% 
+% 	Input: ./Input/
+% 			mac validation sum M1.xlsx
+% 			mac validation sum M2.xlsx
+%     			LPS+IFNg validation RNASeq.xlsx
+%     			IL4 validation RNASeq.xlsx
+%     			mac validation sum M1 PM.xlsx
+%     			mac validation sum M2 PM.xlsx
+%     			modelODE.m
+% 			modelParams.m
+% 			y0.mat
+% 		./Model Simulation/QuantValidation_3inputs.m
+% 
+% 	Output: ./Model Simulation/simulation results/
+% 			LPS+IFNg validation RNASeq.txt
+% 			LPS+IFNg validation RNASeq.txt
+% 			IL4 validation RNASeq_raw.txt
+% 			IL4 validation RNASeq.txt
+% 			mac validation sum M1in0.7_raw.txt
+% 			mac validation sum M1in0.7.txt
+% 			mac validation sum M2in0.7_raw.txt
+% 			mac validation sum M2in0.7.txt
+% 			macmodelvalidation_M2in0.7.txt
+% 			macmodelvalidation_M1in0.7.txt
+% 
+% 		./Model Simulation/plots/
+% 			Arg1_mrna0.7.tif - Fig 2B
+% 			CCL17_mrna0.7.tif
+% 			IKBa_mrna0.7.tif
+% 			IL1_mrna0.7.tif - Fig 2B
+% 			IL6_mrna0.7.tif
+% 			IL10_mrna0.7.tif
+% 			IL12_mrna0.7.tif
+% 			iNOS_mrna0.7.tif - Fig 2B
+% 			IRF1_mrna0.7.tif
+% 			macmodelvalidation M1 in0.7.tif - Fig 2A
+% 			macmodelvalidation M2 in0.7.tif - Fig 2A
+% 			MMP3_mrna0.7.tif
+% 			MMP7_mrna0.7.tif
+% 			MMP9_mrna0.7.tif
+% 			MMP12_mrna0.7.tif
+% 			PPARg_mrna0.7.tif
+% 			SOCS1_mrna0.7.tif - Fig 2B
+% 			SOCS3_mrna0.7.tif
+% 			TNFa_mrna0.7.tif
+% 			VEGF_mrna0.7.tif
+% Code adapted from Astor Liu runValidation.m (11/2/2017)
 % Jingyuan Zhang reduced version to only generate IFNg+LPS and IL4 simulation
 % May 1, 2018
 

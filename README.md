@@ -1,12 +1,21 @@
-The code and the necessary inputs used in the manuscript are illustrated here. Please refer to saucermanlab/Netflux for the LDE model generation.
+Logic-based differential equation model of the macrophage signaling network.
+
+from:
+Xiaji Liu1, Jingyuan Zhang1, Angela C. Zeigler1, Anders R. Nelson1, Merry L. Lindsey2, and Jeffrey J. Saucerman1* Network analysis reveals a distinct axis of macrophage activation in response to conflicting inflammatory cues. (Submitted).
+
+This repository provides the code and the necessary inputs used in the manuscript, along with simulation data. Please refer to saucermanlab/Netflux for the LDE model generation.
 
 * Please make sure the working directory is set to the correct path (folder Liu-et-al-Macrophage-Network) before running the codes.
+
+./macrophage network model.xlsx
+
+This spreadsheet contains the macrophage network model structure, parameters, and references, in the format to be opened by Netflux for direct simulations or export of MATLAB/Python code.
 
 ./Model Simulation/M1_M2_Validation.m
 
 This script generates model responses to LPS+IFNg and IL4 stimulation.
 The output includes Fig 2A and 2B.
-	
+
 	Input: ./Input/
 			mac validation sum M1.xlsx
 			mac validation sum M2.xlsx
@@ -30,7 +39,7 @@ The output includes Fig 2A and 2B.
 			mac validation sum M2in0.7.txt
 			macmodelvalidation_M2in0.7.txt
 			macmodelvalidation_M1in0.7.txt
-			
+
 		./Model Simulation/plots/
 			Arg1_mrna0.7.tif - Fig 2B
 			CCL17_mrna0.7.tif
@@ -56,7 +65,7 @@ The output includes Fig 2A and 2B.
 ./Model Simulation/M1_M2_Validation.R
 This script analyzes and plots model responses to LPS+IFNg and IL4 stimulation.
 The output includes Fig 2C.
-	
+
 	Input: 	./Model Simulation/simulation results/
 			LPS+IFNg validation RNASeq.txt
 			IL4 validation RNASeq.txt
@@ -68,7 +77,7 @@ The output includes Fig 2C.
 ./Model Simulation/IFNg_IL4_Validation.m
 
 This script generates model responses to IFNg and IL4 combined stimulation.
-	
+
 	Input: 	./Input/
 			IFNg validation GSE84520.xlsx
 			IFNg+IL4 validation GSE84520.xlsx
@@ -93,12 +102,12 @@ This script generates model responses to IFNg and IL4 combined stimulation.
 
 This script analyzes and plots model responses to IFNg and IL4 combined stimulation.
 The output includes Fig 5B and 5C.
-	
+
 	Input: 	./Model Simulation/simulation results/
 			IFNg validation GSE84520_validation.txt
 			IFNg+IL4 validation GSE84520_validation.txt
 			IL4 validation Illum-GSE84520_validation.txt
-	
+
 	Output: ./Model Simulation/plots/
 			Validation_84520_142Arg1_mrna.png - Fig 5C
 			Validation_84520_142IL4Ra_mrna.png - Fig 5C
@@ -110,7 +119,7 @@ The output includes Fig 5B and 5C.
 ./Pairwise Simulation/pairStimulation.m
 
 This script generates model responses to pairwise stimulations.
-	
+
 	Input: 	./Input/
 			LPS+IFNg validation RNASeq.xlsx
     			IL4 validation RNASeq.xlsx
@@ -127,23 +136,23 @@ This script generates model responses to pairwise stimulations.
 			IL4 validation exp automated_mRNA only.xlsx_Screening.txt
 			Screening_output.txt
 			Screening_percentMatch.txt
-			
+
 ./Pairwise Simulation/screeningProfile.R
 
 This script analyzes and plots model responses to pairwise stimulations and single input stimulations.
 The output includes Fig 4(ABC), 5A, and supp Fig 1(ABC).
-	
+
 	Input: 	./Input/
 			M0vsM1_matched.csv
 			M0vsM1_matched.csv
 		./Pairwise Simulation/simulation results/Screening_output.txt
 		./Pairwise Simulation/simulation results/Screening_percentMatch.txt
-	
+
 	Output: ./Pairwise Simulation/simulation results/
 			Screening_hclust1_stimuli-0.7nontemp12.csv - this is the stimulus combination clustering
 			Screening_hclust2_nodes-0.7nontemp12.csv
 			Signaling_Modules_for_Fig5A0.7nontemp12.csv - this is the clustering/node modules used in Fig 5A
-			
+
 		./Pairwise Simulation/plots/
 			Screening_module_dim2_IFNg0.7_12.png - Fig 5A
 			Screening_PCA2D_dim0.7nontemp12.png - Fig 4B
@@ -163,7 +172,7 @@ simulation results/Stimulus_Combination_clustering_manual_assignment_of_hclust1
 ./Sensitivity Screening/runSensScreening.m
 
 This script runs sensitivity analysis (node KO) with all single stimuli and all stimulus combinations.
-	
+
 	Input: 	./Input/
 			Stimuli chart.xlsx
      			modelODE.m

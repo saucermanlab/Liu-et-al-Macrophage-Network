@@ -1,3 +1,23 @@
+% ./Pairwise Simulation/pairStimulation.m
+% 
+% This script generates model responses to pairwise stimulations.
+% 
+% 	Input: 	./Input/
+% 			LPS+IFNg validation RNASeq.xlsx
+%     			IL4 validation RNASeq.xlsx
+%      			Stimuli chart.xlsx
+%      			modelODE.m
+% 			modelParams.m
+% 			y0.mat
+% 		./Pairwise Simulation/PairstimuliScreening_3inputs.m
+% 
+% 	Output: ./Pairwise Simulation/simulation results/
+% 			LPS+IFNg validation exp automated_mRNA only.xlsx_Screening_raw.txt
+% 			LPS+IFNg validation exp automated_mRNA only.xlsx_Screening.txt
+% 			IL4 validation exp automated_mRNA only.xlsx_Screening_raw.txt
+% 			IL4 validation exp automated_mRNA only.xlsx_Screening.txt
+% 			Screening_output.txt
+% 			Screening_percentMatch.txt
 % Code orginally from Astor Liu pairstimulation.m (9/21/2017)
 % Jingyuan Zhang reduced version (no figures, no comparison to classic
 % markers)
