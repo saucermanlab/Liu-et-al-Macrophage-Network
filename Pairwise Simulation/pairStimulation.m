@@ -1,23 +1,3 @@
-% ./Pairwise Simulation/pairStimulation.m
-% 
-% This script generates model responses to pairwise stimulations.
-% 
-% 	Input: 	./Input/
-% 			LPS+IFNg validation RNASeq.xlsx
-%     			IL4 validation RNASeq.xlsx
-%      			Stimuli chart.xlsx
-%      			modelODE.m
-% 			modelParams.m
-% 			y0.mat
-% 		./Pairwise Simulation/PairstimuliScreening_3inputs.m
-% 
-% 	Output: ./Pairwise Simulation/simulation results/
-% 			LPS+IFNg validation exp automated_mRNA only.xlsx_Screening_raw.txt
-% 			LPS+IFNg validation exp automated_mRNA only.xlsx_Screening.txt
-% 			IL4 validation exp automated_mRNA only.xlsx_Screening_raw.txt
-% 			IL4 validation exp automated_mRNA only.xlsx_Screening.txt
-% 			Screening_output.txt
-% 			Screening_percentMatch.txt
 % Code orginally from Astor Liu pairstimulation.m (9/21/2017)
 % Jingyuan Zhang reduced version (no figures, no comparison to classic
 % markers)
@@ -28,13 +8,12 @@ clc;
 close all;
 
 % Set file directory path
-cd('Pairwise Simulation')
-addpath('../Input')
+cd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Pairwise Simulation')
 
 % Choose validation reference file; 0: mac validation spreadsheet model
 % v5.1.xlsx; 1:
-val_names={'LPS+IFNg validation RNASeq.xlsx'...
-    'IL4 validation RNASeq.xlsx'};
+val_names={'M0 vs M1 validation exp automated_mRNA only.xlsx'...
+    'M0 vs M2 validation exp automated_mRNA only.xlsx'};
 
 % Read the stimuli combinations to be tested
 [~, txt, raw] = xlsread('Stimuli chart.xlsx');
@@ -111,5 +90,3 @@ tableP = array2table(percentMatch');
 tableP.Properties.VariableNames = {'Match_to_M1' 'Match_to_M2'};
 tableP.Properties.RowNames = comboname;
     writetable(tableP,['simulation results/' 'Screening_percentMatch.txt'],'Delimiter','\t','WriteRowNames',true);
-
-cd('..')

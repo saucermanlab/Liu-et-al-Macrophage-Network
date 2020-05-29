@@ -7,22 +7,22 @@ require(gdata)
 require(reshape2)
 require(gplots)
 
-setwd("Model Simulation")
+# setwd("/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation/simulation results")
 
 val.names <- list.files('simulation results',pattern='*_validation.txt$')
 val.actnames <- list.files('simulation results',pattern='*_act.txt$')
 
 gse1 <- 'GSE84520'
 
-val.gse.names.1 <- list.files('simulation results',pattern='*.txt$')
-val.gse.names.1 <- val.gse.names.1[-grep('_raw',val.gse.names.1)]
-val.gse.names.1 <- val.gse.names.1[-grep('_act',val.gse.names.1)]
+val.gse.names.1 <- list.files('simulation results',pattern='*validation.txt$')
+# val.gse.names.1 <- val.gse.names.1[-grep('_raw',val.gse.names.1)]
+# val.gse.names.1 <- val.gse.names.1[-grep('_act',val.gse.names.1)]
 val.gse.names <- lapply(gse1,function(x,y) y[grep(x,y)],val.gse.names.1)
-names(val.gse.names) <- paste0('GSE',gse1)
+# names(val.gse.names) <- paste0('GSE',gse1)
 
 val.gse <- list()
 i = 1
-val.gse1 <- lapply(unlist(val.gse.names[i]),function(x) read_delim(x,delim = '\t')[c(4,9)])
+val.gse1 <- lapply(unlist(val.gse.names[i]),function(x) read_delim(paste0('simulation results/',x),delim = '\t')[c(4,9)])
 names(val.gse1) <- unlist(val.gse.names[i])
 val.gse[i] <- list(val.gse1)
 
@@ -48,10 +48,11 @@ i = 1
     for (j in 1:length(val)) {
       val2 <- val[[j]]
       vname <- unlist(strsplit(names(val)[j],'validation'))[1]
-      val2.model.1 <- read_delim(val.actnames[grep(pattern = vname,val.actnames,fixed = TRUE)[1]],
+      val2.model.1 <- read_delim(paste0('simulation results/',unlist(strsplit(names(val)[j],'_validation'))[1],'_act.txt'),
                                  delim = "\t")[,1:350]
       
       actout <- c('SOCS1_mrna','IL4Ra_mrna','Arg1_mrna','iNOS_mrna','TNFa_mrna')
+      actout.label <- c('Socs1','Il4ra','Arg1','Nos2','Tnfa')
       if (j==1) {act.plot <- cbind(vname,val2.model.1[val2.model.1$yAll1 %in% actout,])}
       else {act.plot <- rbind(act.plot,cbind(vname,val2.model.1[val2.model.1$yAll1 %in% actout,]))}
       
@@ -91,7 +92,7 @@ i = 1
         scale_color_manual(values=c("orange", "skyblue3", "forestgreen"))+
         scale_x_continuous(limits = c(-4,14),minor_breaks = 0.001, breaks = seq(0,12,4)) +
         scale_y_continuous(limits = c(0,1),label = c("0", "0.5", "1"), breaks = seq(0,1,0.5)) +
-        labs(title=p,x="Time (h)", y = "Norm. Activity")+
+        labs(title=actout.label[actout==p],x="Time (h)", y = "Norm. Expression")+
         theme_bw()+
         theme(text = element_text(size = 20, colour = 'black'),
               axis.text = element_text(size = 20, colour = 'black'),
@@ -107,7 +108,7 @@ i = 1
               # legend.spacing = unit(3,"cm"),
               legend.title = element_blank(),
               legend.position='right')
-      ggsave(gact, file=paste0("../plots/Validation_",gse1[i],"_",ti,p,".png"), width=4.5, height=3,dpi = 300)
+      ggsave(gact, file=paste0("plots/Validation_",gse1[i],"_",ti,p,".pdf"), width=4.5, height=3,device = 'pdf') #,dpi = 300)
     }
     
     
@@ -142,13 +143,13 @@ i = 1
     val.plot.2.p.s[,1:(len/2)] <- t(scale(t(val.plot.2.p.s[,1:(len/2)]),center = FALSE))
     val.plot.2.p.s[,(len/2+1):len] <- t(scale(t(val.plot.2.p.s[,(len/2+1):len]),center = FALSE))
     hc.s <- hclust(dist(val.plot.2.p.s[,1:len]),method = 'ward.D') ###(len/2) vs len
-    rownames(val.plot.2.p.s) <- gsub('_mrna',replacement = '',rownames(val.plot.2.p.s))
+    rownames(val.plot.2.p.s) <- sub('Inos','Nos2',tools::toTitleCase(tolower(gsub('_mrna',replacement = '',rownames(val.plot.2.p.s)))))
     val.plot.2.p.s.2 <- cbind(val.plot.2.p.s,0)
     val.plot.2.p.s.2 <- val.plot.2.p.s.2[,c((len/2+1):len,len+1,1:(len/2))]
-    png(paste0("../plots/Validation_",gse1[i],"_cscaled_",ti,"_reverse.png"),    # create PNG for the heat map        
-        width = 7*300,        # 5 x 300 pixels
-        height = 3*300,
-        res = 300,            # 300 pixels per inch
+    pdf(paste0("plots/Validation_",gse1[i],"_cscaled_",ti,"_reverse.pdf"),    # create PNG for the heat map        
+        width = 7,        # 5 x 300 pixels
+        height = 3,
+        # res = 300,            # 300 pixels per inch
         pointsize = 8)        # smaller font size
     heatmap.2(t(val.plot.2.p.s.2),# cellnote = dat,  # same data set for cell labels; main = "Correlation", # heat map title
               na.rm = TRUE,

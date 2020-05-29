@@ -1,0 +1,11 @@
+input1	input2	input3	output	measurement	prediction	predictedChange	match	expression
+IL10			IL10_mrna	Increase	Increase	103.3163	yes	2.97
+IL10			IL15_mrna	Decrease	Decrease	0.066884	yes	-3.79
+IL10			CXCL10_mrna	Increase	Decrease	0.21354	no	4.61
+IL10			SOCS3_mrna	Increase	Increase	562.1147	yes	3.42
+IL10			IRF1_mrna	Increase	No Change	0.7353	no	6.4
+IL10			Myc_mrna	Decrease	No Change	1.0557	no	-4.58
+IL10			CCL17_mrna	Decrease	No Change	1.0557	no	-3.4
+IL10			IL4Ra_mrna	Increase	Increase	347.0647	yes	1.9
+IL10			Arg1_mrna	Increase	No Change	1.0557	no	1.41
+IL10			CD23_mrna	Increase	No Change	1.0557	no	4.2

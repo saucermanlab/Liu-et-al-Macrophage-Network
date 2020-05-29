@@ -1,54 +1,4 @@
-% ./Model Simulation/M1_M2_Validation.m
-% 
-% This script generates model responses to LPS+IFNg and IL4 stimulation.
-% The output includes Fig 2A and 2B.
-% 
-% 	Input: ./Input/
-% 			mac validation sum M1.xlsx
-% 			mac validation sum M2.xlsx
-%     			LPS+IFNg validation RNASeq.xlsx
-%     			IL4 validation RNASeq.xlsx
-%     			mac validation sum M1 PM.xlsx
-%     			mac validation sum M2 PM.xlsx
-%     			modelODE.m
-% 			modelParams.m
-% 			y0.mat
-% 		./Model Simulation/QuantValidation_3inputs.m
-% 
-% 	Output: ./Model Simulation/simulation results/
-% 			LPS+IFNg validation RNASeq.txt
-% 			LPS+IFNg validation RNASeq.txt
-% 			IL4 validation RNASeq_raw.txt
-% 			IL4 validation RNASeq.txt
-% 			mac validation sum M1in0.7_raw.txt
-% 			mac validation sum M1in0.7.txt
-% 			mac validation sum M2in0.7_raw.txt
-% 			mac validation sum M2in0.7.txt
-% 			macmodelvalidation_M2in0.7.txt
-% 			macmodelvalidation_M1in0.7.txt
-% 
-% 		./Model Simulation/plots/
-% 			Arg1_mrna0.7.tif - Fig 2B
-% 			CCL17_mrna0.7.tif
-% 			IKBa_mrna0.7.tif
-% 			IL1_mrna0.7.tif - Fig 2B
-% 			IL6_mrna0.7.tif
-% 			IL10_mrna0.7.tif
-% 			IL12_mrna0.7.tif
-% 			iNOS_mrna0.7.tif - Fig 2B
-% 			IRF1_mrna0.7.tif
-% 			macmodelvalidation M1 in0.7.tif - Fig 2A
-% 			macmodelvalidation M2 in0.7.tif - Fig 2A
-% 			MMP3_mrna0.7.tif
-% 			MMP7_mrna0.7.tif
-% 			MMP9_mrna0.7.tif
-% 			MMP12_mrna0.7.tif
-% 			PPARg_mrna0.7.tif
-% 			SOCS1_mrna0.7.tif - Fig 2B
-% 			SOCS3_mrna0.7.tif
-% 			TNFa_mrna0.7.tif
-% 			VEGF_mrna0.7.tif
-% Code adapted from Astor Liu runValidation.m (11/2/2017)
+% Code orginally from Astor Liu runValidation.m (11/2/2017)
 % Jingyuan Zhang reduced version to only generate IFNg+LPS and IL4 simulation
 % May 1, 2018
 
@@ -56,11 +6,14 @@
 clear all;
 close all;
 
-% Set your file directory path
-
-cd('Model Simulation/')
-addpath('../Input')
-
+% Set file directory path
+% Do I need to cd at all?
+path = matlab.desktop.editor.getActiveFilename;
+cd(fileparts(path))
+% cd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation/')
+% val_names={'mac validation sum M1.xlsx' 'mac validation sum M2.xlsx'...
+%    'LPS+IFNg validation RNASeq.xlsx' 'IL4 validation RNASeq.xlsx'...
+%    'mac validation sum M1 PM.xlsx' 'mac validation sum M2 PM.xlsx'};
 val_names={'LPS+IFNg validation RNASeq.xlsx' 'IL4 validation RNASeq.xlsx'};
 
 
@@ -74,47 +27,58 @@ yAll=[];
 yTran1=[];
 yTran2=[];
 
-for val=1:4 % 1:22
+[params,y0] = modelParams;
+[rpar,tau,ymax,speciesNames]=params{:};
+speciesNames2 = strrep(speciesNames,'_','\_');
+
+for val=1:2 % 1:22
     validationfname = sprintf('%s',val_names{val}); % Validation reference file name
     fname = strsplit(validationfname,'.');
     perturb = 'clc'; % Perturb value
     thresh = 2; % Threshold value
     
-    [percentMatch(val),activityChange,resultChart,rawResult,matchL,yAll] = QuantValidation_3inputs(validationfname,perturb,thresh,inputlevel);
+%     [percentMatch(val),activityChange,resultChart,rawResult,matchL,yAll] = QuantValidation_3inputs(validationfname,perturb,thresh,inputlevel);
     
     % Convert the resultChart into table and save as a tab-delimited txt file
-    table = cell2table(resultChart(2:end,:)); % Convert the validation outputs into a table
-    table.Properties.VariableNames = resultChart(1,:); % Use the output file headings as the table labels
-    writetable(table,['./simulation results/' fname{1} 'in' num2str(inputlevel) '.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
+%     table = cell2table(resultChart(2:end,:)); % Convert the validation outputs into a table
+%     table.Properties.VariableNames = resultChart(1,:); % Use the output file headings as the table labels
+%     writetable(table,['./simulation results/' fname{1} 'in' num2str(inputlevel) '.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
     
     % Convert the rawResult into table and save as a tab-delimited txt file
-    table2 = cell2table(rawResult(2:end,:));
-    table2.Properties.VariableNames = rawResult(1,:);
-    writetable(table2,['./simulation results/' fname{1} 'in' num2str(inputlevel) '_raw.txt'],'Delimiter','\t','WriteRowNames',true);
+%     table2 = cell2table(rawResult(2:end,:));
+%     table2.Properties.VariableNames = rawResult(1,:);
+%     writetable(table2,['./simulation results/' fname{1} 'in' num2str(inputlevel) '_raw.txt'],'Delimiter','\t','WriteRowNames',true);
     
     if val == 1
-        table3 = cell2table(yAll); % Convert the validation outputs into a table
+%         table3 = cell2table(yAll); % Convert the validation outputs into a table
         % table3.Properties.VariableNames = {'species' 'yStart' 'yEnd'}; % Use the output file headings as the table labels
-        writetable(table3,['./simulation results/macmodelvalidation_M1' 'in' num2str(inputlevel) '.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
+%         writetable(table3,['./simulation results/macmodelvalidation_M1' 'in' num2str(inputlevel) '.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
         
-        speciesNames2 = strrep(yAll(:,1),'_','\_');
-        yTran1 = yAll(:,2:end);
-        yTran1 = cell2mat(yTran1);
+        yTran1 = dlmread(['./simulation results/macmodelvalidation_M1' 'in' num2str(inputlevel) '.txt'],'\t',1,1);
+%         yTran1 = yAll(:,2:end);
+%         yTran1 = cell2mat(yTran1);
         matches = strfind(speciesNames2,'mrna');
         out = find(~cellfun(@isempty,matches));
         out = out([1:2,4,10:11,14:16,18:19,22:23,25:26,31:32,34,17]);
-        ptitle = ['./plots/macmodelvalidation M1 in' num2str(inputlevel) '.tif'];
+        labels = strrep(speciesNames2(out),'IL1\_mrna','Il1a');
+        labels = strrep(labels,'\_mrna','');
+        labels = strrep(labels,'iNOS','Nos2');
+        for i=1:size(labels,2)
+            labels{i} = lower(labels{i});
+            labels{i}(1)=upper(labels{i}(1));
+        end
+        ptitle = ['./plots/macmodelvalidation M1 in' num2str(inputlevel) '.pdf'];
         
         figure
         colormap(bone);
-        imagesc(yTran1(out,1:400),[0,1]);
+        imagesc(yTran1(out,1:end),[0,1]);
         ax=gca;
         axis([70,240,1,length(out)]);% colorbar;
         title('LPS+IFN-\gamma','fontsize',24,'FontWeight','normal');
         xlabel('Time (h)','FontSize',24);
         ylabel('Node','FontSize',24);
         set(gca,'YTick',1:length(out));
-        set(gca,'YTickLabel',speciesNames2(out),'FontSize',12);
+        set(gca,'YTickLabel',labels,'FontSize',12);
         ax.XTick = [102:40:3100];
         ax.XTickLabel = {'\fontsize{24} 0','\fontsize{24} 4','\fontsize{24} 8',...
             '\fontsize{24} 12',' ',' ',' ','','','\fontsize{24} 24'};
@@ -125,21 +89,22 @@ for val=1:4 % 1:22
         h=colorbar('location','EastOutside');
         % xf=get(gca,'position');
         set(h,'FontSize',24);
-        saveas(gcf,ptitle,'tiffn');
+        saveas(gcf,ptitle,'pdf');
         close
         
     elseif val == 2
-        table4 = cell2table(yAll); % Convert the validation outputs into a table
+%         table4 = cell2table(yAll); % Convert the validation outputs into a table
         % table4.Properties.VariableNames = {'species' 'yStart' 'yEnd'}; % Use the output file headings as the table labels
-        writetable(table4,['./simulation results/macmodelvalidation_M2' 'in' num2str(inputlevel) '.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
+%         writetable(table4,['./simulation results/macmodelvalidation_M2' 'in' num2str(inputlevel) '.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
         
-        speciesNames2 = strrep(yAll(:,1),'_','\_');
-        yTran2 = yAll(:,2:end);
-        yTran2 = cell2mat(yTran2);
+%         speciesNames2 = strrep(yAll(:,1),'_','\_');
+        yTran2 = dlmread(['./simulation results/macmodelvalidation_M2' 'in' num2str(inputlevel) '.txt'],'\t',1,1);
+%         yTran2 = yAll(:,2:end);
+%         yTran2 = cell2mat(yTran2);
         %     matches = strfind(speciesNames2,'mrna');
         %     out = find(~cellfun(@isempty,matches));
         %     out = out([1:2,4,6,10:12,14:16,18:20,22:23,25:26,29:34,17]);
-        ptitle = ['./plots/macmodelvalidation M2 in' num2str(inputlevel) '.tif'];
+        ptitle = ['./plots/macmodelvalidation M2 in' num2str(inputlevel) '.pdf'];
         figure
         colormap(bone);
         ax=gca;
@@ -149,7 +114,7 @@ for val=1:4 % 1:22
         xlabel('Time (h)','FontSize',24);
         ylabel('Node','FontSize',24);
         set(gca,'YTick',1:length(out));
-        set(gca,'YTickLabel',speciesNames2(out),'FontSize',12);
+        set(gca,'YTickLabel',labels,'FontSize',12);
         ax.XTick = [102:40:3100];
         ax.XTickLabel = {'\fontsize{24} 0','\fontsize{24} 4','\fontsize{24} 8',...
             '\fontsize{24} 12',' ',' ',' ','','','\fontsize{24} 24'};
@@ -160,11 +125,11 @@ for val=1:4 % 1:22
         h=colorbar('location','EastOutside');
         % xf=get(gca,'position');
         set(h,'FontSize',24);
-        saveas(gcf,ptitle,'tiffn');
+        saveas(gcf,ptitle,'pdf');
         close
         
         % Plot for example
-        otitle1 = yAll(out,1);
+        otitle1 = labels;
         for ko=1:length(out)
             otitle = otitle1{ko};
             figure
@@ -177,14 +142,14 @@ for val=1:4 % 1:22
             line([240,240],[0,1.2],'Color','k','LineWidth',2);
             ax=gca;
             set(ax, 'box','off')
-            title(speciesNames2(out(ko),:),'fontsize',24,'FontWeight','normal');
-            xlabel('Time (h)','FontSize',24);
-            ylabel('Norm. Activity','FontSize',24);
+            title(labels(ko),'fontsize',20,'FontWeight','normal');
+            xlabel('Time (h)','FontSize',20);
+            ylabel('Norm. Expression','FontSize',20);
             set(gca,'YTick',0:0.5:1);
-            set(gca,'YTickLabel',[0:0.5:1],'FontSize',24);
+            set(gca,'YTickLabel',[0:0.5:1],'FontSize',20);
             ax.XTick = [102:40:3100];
-            ax.XTickLabel = {'\fontsize{24} 0','\fontsize{24} 4','\fontsize{24} 8','\fontsize{24} 12',...
-                '\fontsize{24} 16',' ',' ',' ','','','\fontsize{24} 24'};
+            ax.XTickLabel = {'\fontsize{20} 0','\fontsize{20} 4','\fontsize{20} 8','\fontsize{20} 12',...
+                '\fontsize{20} 16',' ',' ',' ','','','\fontsize{20} 24'};
             ax=gca;
             set(gcf,'PaperSize',[4,3]);
             set(gcf,'PaperPosition',[0 0 4 3]);
@@ -194,7 +159,7 @@ for val=1:4 % 1:22
             else
             end
             cd('./plots')
-            saveas(gcf,[otitle,num2str(inputlevel),'.tif'],'tiffn');
+            saveas(gcf,[otitle,num2str(inputlevel),'.pdf'],'pdf');
             cd ..
             close
         end
@@ -203,4 +168,3 @@ for val=1:4 % 1:22
     percentMatch = percentMatch/100
 end
 
-cd('..')

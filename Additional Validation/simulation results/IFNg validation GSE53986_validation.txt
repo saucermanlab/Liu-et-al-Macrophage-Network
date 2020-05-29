@@ -1,0 +1,9 @@
+input1	input2	input3	output	measurement	prediction	predictedChange	match	expression
+IFNg			CXCL10_mrna	Increase	Increase	238.8337	yes	6.26545592867822
+IFNg			MMP12_mrna	Decrease	Decrease	0.31811	yes	-6.52414405538958
+IFNg			CCL5_mrna	Increase	No Change	1	no	3.43999677839561
+IFNg			IRF1_mrna	Increase	Increase	676.3219	yes	3.08773901828277
+IFNg			SOCS1_mrna	Increase	Increase	527.7691	yes	6.13533372369313
+IFNg			ICAM1_mrna	Increase	Increase	676.3219	yes	1.81770073802092
+IFNg			PPARg_mrna	Decrease	Decrease	0.31744	yes	-1.22968638408147
+IFNg			IL4Ra_mrna	Increase	Increase	336.4747	yes	1.89459088927905

@@ -1,0 +1,15 @@
+input1	input2	input3	output	measurement	prediction	predictedChange	match	expression
+IL4			Arg1_mrna	Increase	Increase	967.8329	yes	2.419958101
+IL4			CCL17_mrna	Increase	Increase	967.8329	yes	2.162079553
+IL4			Fizz1_mrna	Increase	Increase	967.8329	yes	1.216972967
+IL4			IL1_mrna	Increase	Increase	6.3571	yes	0.651076857
+IL4			IL18_mrna	Decrease	Decrease	0.40675	yes	-1.058347538
+IL4			IRF1_mrna	Increase	No Change	1.1208	no	0.672043552
+IL4			KLF4_mrna	Increase	Increase	967.8704	yes	1.298458677
+IL4			Myc_mrna	Increase	Increase	967.8329	yes	2.671183531
+IL4			PPARg_mrna	Increase	Increase	1137.4609	yes	3.021523112
+IL4			SMAD7_mrna	Increase	No Change	1.1208	no	0.538843088
+IL4			VEGF_mrna	Decrease	No Change	0.60321	no	-0.951600922
+IL4			Ym1_mrna	Increase	Increase	967.8329	yes	5.511492584
+IL4			SOCS1_mrna	Increase	Increase	536.6149	yes	4.737153367
+IL4			SOCS3_mrna	Increase	No Change	1.9221	no	0.843534114

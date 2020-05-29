@@ -2,7 +2,7 @@
 # Jingyuan Zhang reduced version to only generate Model vs Lindsey RNAseq heatmap (rms normalized) for Figure 2C
 # 5/8/2018
 
-setwd('Model Simulation')
+# setwd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation')
 require(tidyverse)
 require(gdata)
 require(gplots)
@@ -54,6 +54,9 @@ val.plot.dim.ps.s[,c(1,2)] <- t(scale(t(val.plot.2[,c(1,2)]),center = FALSE))
 val.plot.dim.ps.s[,c(3,4)] <- t(scale(t(val.plot.2[,c(3,4)]),center = FALSE))
 x.label <- unlist(strsplit(rownames(val.plot.dim.ps.s),'_'))
 x.label <- x.label[-grep('mrna',x.label)]
+x.label[x.label=='IL1'] = 'IL1A'
+x.label[x.label=='iNOS'] = 'Nos2'
+x.label <- tools::toTitleCase(tolower(x.label))
 
 val.plot.dim.ps.s.2 <- cbind(val.plot.dim.ps.s[,c(3,4)],0,val.plot.dim.ps.s[,c(1,2)])
 
@@ -65,10 +68,10 @@ group.both.dim.ps <- as.factor(group)
 
 #hc <- hclust(dist(val.plot.dim.ps.s.2[,-3]),method = 'ward.D') #without the zero column
 
-png(paste0("plots/Validation_both_dim_Seq_cscaled",input,yend,"_alt_col.png"),    # create PNG for the heat map        
-    width = 4*300,        # 5 x 300 pixels
-    height = 1.5*300,
-    res = 300,            # 300 pixels per inch
+pdf(file = paste0("plots/Validation_both_dim_Seq_cscaled",input,yend,"_alt_col.pdf"),    # create PNG for the heat map        
+    width = 4,        # 5 x 300 pixels
+    height = 1.5,
+    # res = 300,            # 300 pixels per inch
     pointsize = 9)        # smaller font size
 heatmap.2(t(val.plot.dim.ps.s.2),# cellnote = dat,  # same data set for cell labels; main = "Correlation", # heat map title
           lmat = rbind(c(0,4),c(0,3),c(2,1)), # 1. heatmap 2. row dendro 3.col dendro 4. key
@@ -89,7 +92,7 @@ heatmap.2(t(val.plot.dim.ps.s.2),# cellnote = dat,  # same data set for cell lab
           # RowSideColors = c("magenta","cyan")[groups.both.ps],    # Measurement 7-10: red
           dendrogram="column",    # only draw a row dendrogram;
           Rowv="NA", #Colv=as.dendrogram(hc),           # turn off column clustering
-          key.title=NA,
+          key.title='NA',
           key.xlab=NA,
           key.par = list(mgp=c(1.5, 0.5, 0),
                          mar = c(0, 20, 2, 5)), # (bottom, left, top, right)

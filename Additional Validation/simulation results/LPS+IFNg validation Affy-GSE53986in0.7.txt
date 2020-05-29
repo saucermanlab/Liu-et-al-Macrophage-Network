@@ -1,0 +1,18 @@
+input1	input2	input3	output	measurement	prediction	predictedChange	match	expression
+LPS	IFNg		TNFa_mrna	Increase	Increase	322.8947	yes	4.553548611
+LPS	IFNg		IL15_mrna	Increase	Increase	264.6478	yes	2.166596633
+LPS	IFNg		IKBa_mrna	Increase	Increase	264.6478	yes	1.104376331
+LPS	IFNg		iNOS_mrna	Increase	Increase	315.1005	yes	9.125103245
+LPS	IFNg		CXCL10_mrna	Increase	Increase	244.6851	yes	7.534858539
+LPS	IFNg		IL1_mrna	Increase	Increase	9.034586588700017e+20	yes	7.092895417
+LPS	IFNg		IL6_mrna	Increase	Increase	1087.8642	yes	7.586359615
+LPS	IFNg		SOCS3_mrna	Increase	Increase	2400.1	yes	6.473672263
+LPS	IFNg		CCL5_mrna	Increase	Increase	36772.8999	yes	4.725038157
+LPS	IFNg		IRF1_mrna	Increase	Increase	892.4708	yes	3.43612809
+LPS	IFNg		SOCS1_mrna	Increase	Increase	633.5926	yes	7.294938394
+LPS	IFNg		ICAM1_mrna	Increase	Increase	892.4708	yes	2.823731441
+LPS	IFNg		CCL17_mrna	Decrease	Decrease	0.23162	yes	-5.543444386
+LPS	IFNg		PPARg_mrna	Decrease	Decrease	0.23116	yes	-3.675439624
+LPS	IFNg		IL4Ra_mrna	Increase	Increase	464.2677	yes	2.08303514
+LPS	IFNg		Arg1_mrna	Increase	Decrease	0.23162	no	6.985468369
+LPS	IFNg		KLF4_mrna	Increase	Decrease	0.31968	no	3.894324171

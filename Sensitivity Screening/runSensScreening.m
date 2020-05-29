@@ -1,22 +1,3 @@
-% ./Sensitivity Screening/runSensScreening.m
-% 
-% This script runs sensitivity analysis (node KO) with all single stimuli and all stimulus combinations.
-% 
-% 	Input: 	./Input/
-% 			Stimuli chart.xlsx
-%      			modelODE.m
-% 			modelParams.m
-% 			y0.mat
-% 		./Sensitivity Screening/sensAnalysisScr.m
-% 
-% 	Output: ./Sensitivity Screening/simulation results/
-% 			macmodelSens_IFNb+_0.7.txt
-% 			macmodelSens_IFNb+IL1_0.7.txt
-% 			macmodelSens_IFNb+IL4_0.7.txt
-% 			бн
-% 			macmodelSens_TNFa+IL6_0.7.txt
-% 			macmodelSens_TNFa+IL10_0.7.txt
-% 			macmodelSens_TNFa+IL12_0.7.txt
 % Code orginally from Astor Liu runSensScreening.m (11/2/2017)
 % Jingyuan Zhang edited version
 % May 15, 2018
@@ -26,9 +7,6 @@ tic
 clc;
 clear all;
 close all;
-
-cd('Sensitivity Screening/')
-addpath('../Input')
 
 % read the validation sheet
     [~, txt, raw] = xlsread('Stimuli chart.xlsx');
@@ -65,5 +43,3 @@ table.Properties.RowNames = speciesM1;
 writetable(table,['./simulation results/macmodelSens_' dataset '_0.7.txt'],'Delimiter','\t','WriteRowNames',true); % Write the table variable into a txt file
 end
 toc
-
-cd('..')

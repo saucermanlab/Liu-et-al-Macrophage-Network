@@ -1,36 +1,14 @@
-% ./Model Simulation/IFNg_IL4_Validation.m
-% 
-% This script generates model responses to IFNg and IL4 combined stimulation.
-% 
-% 	Input: 	./Input/
-% 			IFNg validation GSE84520.xlsx
-% 			IFNg+IL4 validation GSE84520.xlsx
-%     			IL4 validation Illum-GSE84520.xlsx
-%     			modelODE.m
-% 			modelParams.m
-% 			y0.mat
-% 		./Model Simulation/QuantValidation_3inputs.m
-% 
-% 	Output: ./Model Simulation/simulation results/
-% 			IFNg validation GSE84520_act.txt
-% 			IFNg validation GSE84520_raw.txt
-% 			IFNg validation GSE84520_validation.txt
-% 			IFNg+IL4 validation GSE84520_act.txt
-% 			IFNg+IL4 validation GSE84520_raw.txt
-% 			IFNg+IL4 validation GSE84520_validation.txt
-% 			IL4 validation Illum-GSE84520_act.txt
-% 			IL4 validation Illum-GSE84520_raw.txt
-% 			IL4 validation Illum-GSE84520_validation.txt
 % Code orginally from Astor Liu runValidation.m (11/2/2017)
 % Jingyuan Zhang reduced version to only generate IFNg IL4 combined simulation
 % May 1, 2018
 clear all;
 close all;
 
-% Set your file directory path here
+% Set file directory path
 
-cd('Model Simulation/')
-addpath('../Input')
+% cd('/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Model Simulation/')
+path = matlab.desktop.editor.getActiveFilename;
+cd(fileparts(path))
 
 val_names={'IFNg validation GSE84520.xlsx' 'IFNg+IL4 validation GSE84520.xlsx' 'IL4 validation Illum-GSE84520.xlsx'};
 
@@ -62,5 +40,3 @@ for val= 1:length(val_names)
  end
 
 percentMatch = percentMatch/100
-
-cd('..')

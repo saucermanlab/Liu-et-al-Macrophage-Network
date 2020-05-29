@@ -1,25 +1,3 @@
-% ./Sensitivity_M1M2_4h/runSens.m
-% 
-% This script plots sensitivity analysis (node KO) results with simulated M1 and M2 stimulations.
-% The output includes Fig 3(ABC), 5A, and supp Fig 3.
-% 
-% 	Input: ./Input/
-% 			macmodelSensLPS+IFNg.txt
-% 			macmodelSensIL4.txt
-%      			modelODE.m
-% 			modelParams.m
-% 			y0.mat
-% 		./Sensitivity_M1M2_4h/
-% 			sensAnalysis.m
-% 			xticklabel_rotate.m
-% 
-% 	Output: ./Sensitivity Screening/
-% 			Sensitive Matrix LPS+IFNg.tiff
-% 			Sensitive Matrix LPS+IFNg Dim.tiff - Fig 3B
-% 			Sensitive Matrix IL4.tiff
-% 			Sensitive Matrix IL4 Dim.tiff - Fig 3C
-% 			Sens_Accum_M1-M2.tiff - Fig 3A
-
 % Code orginally from Astor Liu sensAnalysisScr.m (11/2/2017)
 % Jingyuan Zhang edited version (got rid of Col and Row as outputs since
 % the code ran into errors with them

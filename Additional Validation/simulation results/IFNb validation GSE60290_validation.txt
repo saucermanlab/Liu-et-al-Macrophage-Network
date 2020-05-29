@@ -1,0 +1,2 @@
+input1	input2	input3	output	measurement	prediction	predictedChange	match	expression
+IFNb			CCL5_mrna	Increase	No Change	1	no	0.87892059525418

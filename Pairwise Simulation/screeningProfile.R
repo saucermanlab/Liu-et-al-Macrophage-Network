@@ -5,7 +5,9 @@
 require(tidyverse)
 require(scales)
 
-setwd("/Pairwise Simulation")
+#  setwd(
+#   "/Users/jingyuan/Documents/Academic/research/Macrophage Model/Astor macrophage/macmodel_test_original6.3p_JZ_edits_only_necessary_files/Pairwise Simulation"
+# )
 
 m1m <- read_csv("M0vsM1_matched.csv")
 m1 <- m1m[!is.na(m1m$log2FC_2over1), c(2, 15)]
@@ -229,13 +231,13 @@ group.rna.dim <- as.factor(mydata.module.rna.dim$group)
 
 
 #comprehensive activity heatmap
-png(
-  paste0("./plots/Screening", input, data, k, "_label.png"),
+pdf(
+  paste0("./plots/Screening", input, data, k, "_label.pdf"),
   # create PNG for the heat map
-  width = 12 * 300,
+  width = 12 ,
   # 5 x 300 pixels
-  height = 4 * 300,
-  res = 300,
+  height = 4 ,
+  # res = 300,
   # 300 pixels per inch
   pointsize = 6
 )        # smaller font size
@@ -320,10 +322,12 @@ text(
   xpd = TRUE
 )
 #Add cluster labels instead of the x labels
-text(x = c(0.28,0.35,0.37,0.41,0.51,0.61,0.72,0.87), y = rep(1, 8),
-     labels = c('\nNFkB',' \n\nPI3K','\n \n\n\nSTAT3','\n \nSTAT1',' \n \nSTAT6',
-                ' \n \nIL6',' \n \nTLR4',' \n \nMAPKs'),
-     las = 2, col = "cornflowerblue", font = 2,cex = 2.5, xpd = TRUE)
+text(x = c(0.28,0.33,0.37,0.41,0.48,0.63,0.78,0.87), y = rep(1, 8),
+     labels = c('\n\nPI3K',' \n\n\n\n\nSTAT1','\n \n\n\n\n\nNFkB','\n \nSTAT6',' \n \n\nIL6',
+                ' \n \n\nMAPKs',' \n \n\n\nSTAT3',' \n \n\n\nSTAT4'),
+     # labels = c('\nNFkB',' \n\nPI3K','\n \n\n\nSTAT3','\n \nSTAT1',' \n \nSTAT6',
+     #            ' \n \nIL6',' \n \nTLR4',' \n \nMAPKs'),
+     las = 2, col = "cornflowerblue", font = 2,cex = 2, xpd = TRUE)
 # text(x = c(0.28,0.35,0.37,0.41,0.51,0.61,0.72,0.87), y = rep(0, 8),
 #      labels = c('\n \nNFkB',' \n\nPI3K','\n \n\n\nSTAT3','\n \nSTAT1',' \n \nSTAT6',
 #                 ' \n \nIL6',' \n \nTLR4',' \n \nMAPKs'),
@@ -348,10 +352,10 @@ text(
 dev.off()               # close the PNG device
 
 # Heatmap for single stimulation only
-png(paste0("./plots/Screening_single",input,data,k,"_label.png"),    # create PNG for the heat map        
-    width = 12*300,        # 5 x 300 pixels
-    height = 4*300,
-    res = 300,            # 300 pixels per inch
+pdf(paste0("./plots/Screening_single",input,data,k,"_label.pdf"),    # create PNG for the heat map        
+    width = 12,        # 5 x 300 pixels
+    height = 4,
+    # res = 300,            # 300 pixels per inch
     pointsize = 6)        # smaller font size
 
 heatmap.2(mydata.single,# cellnote = dat,  # same data set for cell labels; main = "Correlation", # heat map title
@@ -434,7 +438,7 @@ pts$V2 <- -pts$V2
   pts.single <- as.data.frame(mds.single$points[,1:3])
  
    label.dim <- rownames(pts)
-    labellist <- c("LPS+","LPS+IFNg","LPS+TNFa","LPS+IL4","IFNg+","IFNg+IL4",
+    labellist <- c("LPS+","LPS+IFNg","LPS+TNFa","LPS+IL4","LPS+IL10","IFNg+","IFNg+IL4",
                    "IFNb+","IFNb+IL4","TNFa+","TNFa+IL4","IL1+","IL4+IFNb","IL4+","IL4+IL6",
                    "IL4+IL12","IL6+","IL6+IL12","IL10+","IL10+IL12","IL12+","control")
     
@@ -451,7 +455,7 @@ pca2d.d <- ggplot(pts,aes(V1, V2,label=label.dim)) +
   geom_point(aes(col = as.factor(groups)),size = 3)+ 
   scale_colour_manual(values=rainbow(cl)) +
   labs(x=pclabs[toString(lab.idx),1],y=pclabs[toString(lab.idx),2]) +
-  geom_text_repel(size=4,segment.size = 0.5, box.padding = unit(0.3, "lines")) +
+  geom_text_repel(size=4,segment.size = 0.5, box.padding = unit(0.4, "lines")) +
   coord_fixed() +
   scale_x_continuous(limits = c(-4.5,6.5),minor_breaks = 0.001, breaks = seq(-4,6,2)) +
   scale_y_continuous(limits = c(-3,4.1),minor_breaks = 0.001, breaks = seq(-4,4,2)) +
@@ -470,7 +474,7 @@ pca2d.d <- ggplot(pts,aes(V1, V2,label=label.dim)) +
         legend.title = element_blank(),
         legend.position='right'
   ) 
-ggsave(pca2d.d, file=paste0("./plots/Screening_PCA2D_dim",input,data,k,".png"), width=6, height=4,dpi = 300)
+ggsave(pca2d.d, file=paste0("./plots/Screening_PCA2D_dim",input,data,k,".pdf"), width=6, height=4)#,dpi = 300)
 
 #1172 PCA contribution
 require(FactoMineR)
@@ -479,11 +483,11 @@ require(factoextra)
 # mydata2.num <- as.matrix(mydata2[,3:132])
 res.pca <- PCA(mydata, scale.unit = FALSE, ncp = 3, graph = FALSE)
 
-  eigenvalues1[[0.7]] <- res.pca$eig$`percentage of variance`[1:3] #error?
+  eigenvalues1[['0.7']] <- res.pca$eig$`percentage of variance`[1:3] #error?
 eigenvalues <- res.pca$eig
 
 res.pca.single <- PCA(mydata.single, scale.unit = FALSE, ncp = 3, graph = FALSE)
-eigenvalues.single1[[input1]] <- res.pca.single$eig$`percentage of variance`[1:3] #error?
+eigenvalues.single1[['0.7']] <- res.pca.single$eig$`percentage of variance`[1:3] #error?
 eigenvalues.single <- res.pca.single$eig
 
 # head(eigenvalues[, 1:2])
@@ -513,6 +517,9 @@ dim <- c("NFKB","TNFa_mrna","iNOS_mrna","CREB","p38","ERK12","JNK","AP1","IL1_mr
          "PPARg_mrna" ,"Arg1_mrna","Fizz1_mrna","VEGF_mrna","IL4Ra_mrna") # added "SOCS1_mrna","SOCS3_mrna","IL4Ra_mrna","IL4R"
 # lab <- var.label.id
 var.label.id[rownames(var.label.id) %not in% dim,4] <- ''
+var.label.id[,4] <- sub('iNOS_mrna','Nos2',var.label.id[,4])
+var.label.id[,4] <- sub('IL1_mrna','Il1a',var.label.id[,4])
+var.label.id[grep('mrna',var.label.id[,4]),4] <- tools::toTitleCase(tolower(sub('_mrna','',var.label.id[grep('mrna',var.label.id[,4]),4])))
 res.pca.2 <- res.pca
 rownames(res.pca.2$var$contrib) <- var.label.id$species
 rownames(res.pca.2$var$cos2) <- var.label.id$species
@@ -526,7 +533,7 @@ Var.con <- ggplot(var.con,aes(Dim.1, Dim.2,label=var.label.id$species)) +
   # guides(guide_legend(ncol=3)) +
   geom_text_repel(size=6,segment.size = 0.5, force = 0.5, segment.color = 'gray40',
                   segment.alpha = 0.7,
-                  box.padding = unit(0.6, "lines"),
+                  box.padding = unit(0.5, "lines"),
                   point.padding = unit(0.2, "lines"), 
                   min.segment.length = unit(0.2, "lines")) +
   coord_fixed() +
@@ -551,7 +558,7 @@ Var.con <- ggplot(var.con,aes(Dim.1, Dim.2,label=var.label.id$species)) +
   annotate('text',x = c(-0.54,-0.42,0.3,0.3), y = c(0.34,-0.15,0.37,-0.15), 
            label = c(' MAPKs\nSTAT1','NF-kB','STAT6','STAT3'), 
            size = 9, color = c('orange','orange','forestgreen','forestgreen'))
-ggsave(Var.con,file=paste0("./plots/Screening_PCA2D_f_contri_dim",input,data,k,"_1moreLabel.png"), width=8, height=6,dpi = 300)
+ggsave(Var.con,file=paste0("./plots/Screening_PCA2D_f_contri_dim",input,data,k,"_1moreLabel.pdf"), width=8, height=6)#,dpi = 300)
 
 
 ###single input PCA distribution
@@ -588,7 +595,7 @@ pca2d.single <- ggplot(pts.single,aes(V1, V2,label=rownames(pts.single))) +
         legend.title = element_blank(),
         legend.position='right'
   )
-ggsave(pca2d.single, file=paste0("./plots/Screening_PCA2D_single",input,data,k,".png"), width=6, height=4,dpi = 300)
+ggsave(pca2d.single, file=paste0("./plots/Screening_PCA2D_single",input,data,k,".pdf"), width=6, height=4)#,dpi = 300)
 
 
 # Single inputs PCA contribution
@@ -604,7 +611,7 @@ Var.con.s <- ggplot(var.con.s,aes(Dim.1, Dim.2,label=var.label.id$species)) +
                   point.padding = unit(0.2, "lines"), 
                   min.segment.length = unit(0.2, "lines")) +
   coord_fixed() +
-  labs(x='PC1 (60%)',y='PC2 (15%)') +
+  labs(x='PC1 (61%)',y='PC2 (14%)') +
   scale_x_continuous(limits = c(-0.6,0.4),minor_breaks = 0.001, breaks = seq(-0.4,0.4,0.2)) +
   scale_y_continuous(limits = c(-0.25,0.4),minor_breaks = 0.001, breaks = seq(-0.2,0.4,0.2)) +
   theme_bw() +
@@ -625,7 +632,7 @@ Var.con.s <- ggplot(var.con.s,aes(Dim.1, Dim.2,label=var.label.id$species)) +
   annotate('text',x = c(-0.52,-0.5,0.3,0.3), y = c(0.33,-0.22,0.37,-0.22), 
            label = c(' MAPKs \nSTAT1','NF-kB','STAT6','STAT3'), 
            size = 10, color = c('orange','orange','forestgreen','forestgreen'))
-ggsave(Var.con.s,file=paste0("./plots/Screening_PCA2D_f_contri_single",input,data,k,"_1moreLabel.png"), width=8, height=6,dpi = 300)
+ggsave(Var.con.s,file=paste0("./plots/Screening_PCA2D_f_contri_single",input,data,k,"_1moreLabel.pdf"), width=8, height=6)#,dpi = 300)
 
 #Fig 5A signaling modules
 mydata.module <- aggregate(. ~ group,mydata.module.1,sum)
@@ -642,10 +649,10 @@ colnames(temp.module.1) <- c("Node","Module#","Module Names")
 write_csv(as.data.frame(temp.module.1),paste0("./simulation results/Signaling_Modules_for_Fig5A",input,data,k,".csv"))
 
 d <- as.matrix(mydata.module.plot[c("IFNg+","IFNg+IL4","IL4+","control"),])
-png(paste0("./plots/Screening_module_dim2_IFNg",input,'_',k,"_original.png"),    # create PNG for the heat map
-    width = 2.5*300,        # 5 x 300 pixels
-    height = 2*300,
-    res = 300,            # 300 pixels per inch
+pdf(paste0("./plots/Screening_module_dim2_IFNg",input,'_',k,"_original.pdf"),    # create PNG for the heat map
+    width = 2.5,        # 5 x 300 pixels
+    height = 2,
+    # res = 300,            # 300 pixels per inch
     pointsize = 6)        # smaller font size
 
 heatmap.2(d,# cellnote = dat,  # same data set for cell labels; main = "Correlation", # heat map title
